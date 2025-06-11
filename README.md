@@ -1,65 +1,50 @@
 # Bare-Metal-Assembly
 
-> *No OS. No abstractions. Just you, your CPU, and a handful of opcodes.*
+> **Random Quote:** Before software can be reusable, it first has to be usable.
 
 This repository contains notes, explanations, and examples of Assembly programming with a focus on operating system development. It is part of a broader series of repositories dedicated to low-level systems programming and crafting an operating system from scratch.
 
 ---
 
-## 📘 What You'll Find Here
+## What You'll Find Here
 
-### 🧠 Introduction to Assembly
-- What is Assembly?
-- Why it matters in OS Development
-- Real mode vs Protected mode vs Long mode
-
-### 🛠️ Syntax & Structure
-- NASM syntax (used throughout)
-- Registers, memory, and addressing
-- Labels, sections, and directives
-
-### 🧩 Core Instructions
-- Data movement (`mov`, `xchg`, `lea`, etc.)
-- Arithmetic and logic (`add`, `sub`, `cmp`, `and`, `or`, etc.)
-- Control flow (`jmp`, `call`, `ret`, `loop`, etc.)
-- Stack operations (`push`, `pop`, `call`, `ret`)
-
-### 🧨 OS Dev-Specific Topics
-- Writing bootloaders (MBR / BIOS)
-- Switching to 32-bit Protected Mode
-- BIOS interrupts (like `int 0x10`)
-- Inline assembly in C (brief)
-- Assembly in kernel development
++ Simple and clear explanations of core Assembly concepts
++ Lots of code examples
++ Beginner-friendly walkthroughs
++ Great, well documented practice projects
 
 ---
 
-## 🧵 Related Repositories
+## Repository Tour
 
-- 🧠 [Crafting-an-OS-Notes-and-Insights](https://github.com/brogrammer232/Crafting-an-OS-Notes-and-Insights)
-- ⛓️ (Coming Soon) [C-Systems-Programming-Notes](#)
-- 🦀 (Coming Soon) [Rust-for-Systems-Dev](#)
-
----
-
-## 🧰 Requirements
-
-- Basic knowledge of computer architecture
-- NASM or any x86 assembler
-- QEMU or VirtualBox for testing
-- A terminal and a willingness to break stuff
+- [**`notes/`**](./notes): The main event. In-depth notes on everything about Assembly for OS development, clearly organized and growing steadily.
+- [**`projects/`**](./projects): Hands-on projects to work on. Fully documented and recommended for practice.
+- [**`resources/`**](./resources): PDFs, images, and other external stuff I found useful (too good to gatekeep).
+- [**`roadmap/`**](./roadmap): A detailed roadmap to help figure out where to start.
+- [**`tools/`**](./tools): Scripts for all sorts of automation to deal with the boring parts and save time.
+- [**CONTRIBUTING.md**](./CONTRIBUTING.md): Want to help? This file tells you how; and more importantly, how *not* to.
+- [**glossary.md**](./glossary.md): Definitions of difficult terms used throughout the notes.
+- [**LICENSE**](./LICENSE): Legal stuff you’ll probably never read.
+- [**SUMMARY.md**](./SUMMARY.md): An index of everything in the repo for quick navigation.
 
 ---
 
-## 🤝 Contributions
+## Where to start
 
-Pull requests, suggestions, and nitpicks are welcome.  
-File an issue if anything’s unclear, incorrect, or you just want to yell about segmentation faults.
++ [Roadmap](./roadmap/README.md)
++ [Welcome](./notes/README.md)
 
----
-
-## 📜 License
-
-MIT – *Do what thou wilt shall be the whole of the license.*
+Or check the full [Table of Contents](SUMMARY.md)
 
 ---
 
+## Related Repositories
+
+- [Crafting-an-OS-Notes-and-Insights](https://github.com/brogrammer232/Crafting-an-OS-Notes-and-Insights)
+- (Coming Soon) [C-Systems-Programming](#)
+
+---
+
+## License
+
+This project is licensed under the MIT Licence because knowledge should be free.
