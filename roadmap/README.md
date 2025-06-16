@@ -4,7 +4,7 @@
 
 Assembly language is essential for writing low-level code, especially in OS_development. This roadmap is tailored for absolute beginners who want to learn x86 Assembly with a focus on building operating systems. It skips outdated DOS-era tutorials and instead dives into the instructions and concepts that matter for real system-level programming.
 
-You don't have to strictly follow the roadmap, feel free to jump to where you need.
+You don't have to strictly follow the roadmap, feel free to jump to where you need. You don’t need to master every instruction up front. Start writing code, hit walls, then come back and learn what you need.
 
 > **Key Rule:** Learn the minimum to move forward. Use new instructions only when you need them. Don't waste time memorizing the whole x86 manual.
 
@@ -12,62 +12,52 @@ You don't have to strictly follow the roadmap, feel free to jump to where you ne
 
 ## Set up dev env
 
-+ Install your assembler of choice. I recommend NASM.
-
----
-
-## Assembler Directives Basics
-
-+ `section`, `global`, `org`, `bits`
-+ `times`, `equ`, `db/dw/dd`
-+ `resb`, `resw`, `resd`
-+ `macro`, `%define`, `%if`
-+ `rep`
++ Install your assembler of choice. Recommended: **NASM**.
 
 ---
 
 ## Instruction Format
 
-+ Learn both or choose your poison:
-	- Intel's syntax
-	- AT&T syntax
++ Choose your syntax (Intel or AT&T). Both will be covered here.
 + Operand order: `mov dest, src`
 + Immediate, register, memory operands
 + Label syntax and jump targets
++ Assembler directives: `section`, `org`, `bits`, `global`
 
 ---
 
-## Data Movement Instructions
+## Data Movement
 
-+ `mov`, `xchg`, `lea`
++ `MOV`, `XCHG`, `LEA`
++ Assembler directives: `equ`, `db` and its variants.
 
 ---
 
 ## Arithmetic and Logic
 
-+ Learn the following commands: `ADD`, `SUB`, `INC`, `DEC`, `MUL`, `DIV`. `AND`, `OR`, `XOR`, `NOT`, `SHL`, `SHR`.
-
 + `ADD`, `SUB`, `INC`, `DEC`
-+ `AND`, `OR`, `XOR`, `NOT`
++ `AND`, `OR`, `XOR`, `NOT`, `SHL`, `SHR`
 
 ---
 
-## Control flow
+## Conditionals
 
-+ `JC`, `JZ`, `JE`, `JNE`, `JMP`, `JG`, `JL`
++ `JC`, `JZ`, `JE`, `JNE`, `JMP`, `JG`, `JL`, etc.
 + `CMP`, `TEST`
-+ `CALL`, `RET`
-+ `LOOP`, `REP`, `REPE`, `REPNE`
+
+---
+
+## Loops
+
++ `JMP`, `LOOP`
++ `REP`, `REPE`, `REPNE`
++ Assembler directive: `%define`, `times`
 
 ---
 
 ## String and Memory Instructions
 
-+ `MOVSB`, `MOVSW`, `MOVSD`
-+ `STOSB`, `STOSW`, `STOSD`
-+ `LODSB`, `LODSW`, `LODSD`
-+ `SCASB`, `SCASW`, `SCASD`
-+ `REP`, `REPE`, `REPNE`
++ `MOVSB`, `STOSB`, `LODSB`, `SCASB`, and their variants.
 
 ---
 
@@ -85,4 +75,4 @@ You don't have to strictly follow the roadmap, feel free to jump to where you ne
 
 ---
 
-> The journey is not over. There are a lot of other commands that you need to know like `LGDT`, etc. You'll learn them as you go deeper into OS dev.
+> The journey is not over. More instructions like `LGDT`, `LIDT`, `INVLPG` will appear as you go deeper into OS development. Learn them when they are needed, not all at once. They will all be covered in this repository.
