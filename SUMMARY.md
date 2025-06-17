@@ -13,8 +13,6 @@
 ## Roadmap
 
 + [Main Roadmap File](./roadmap/README.md)
-+ [Vanilla Roadmap](./roadmap/00_vanilla.md)
-+ [Projects Roadmap](./roadmap/01_projects.md)
 
 ---
 
@@ -28,6 +26,8 @@
 ### Assembly Instructions
 
 ### Assembler Directives
+
+### BIOS Interrupts
 
 ---
 
