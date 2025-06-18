@@ -47,10 +47,13 @@ Every topic comes with a focused project. Don't skip them. Real understanding co
 **Projects:**
 + [Data Movement 1](../projects/01_data_movement/README.md)
 
+**Project idea:**
+    - Move a literal to memory.
+    - Move t
+
 ---
 
 ## Arithmetic and Logic
-
 + `ADD`, `SUB`, `INC`, `DEC`
 + `AND`, `OR`, `XOR`, `NOT`, `SHL`, `SHR`
 
