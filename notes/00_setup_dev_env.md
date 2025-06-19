@@ -13,17 +13,19 @@
 
 ## Platform
 
-Use Linux. Here's why. Operating System development and low-level programming require direct hardware access, fine-grained control over the development environment, and customizable toolchains - conditions where Linux significantly outperforms Windows in terms of flexibility, transparency, and developer support.
+Use **Linux**. Here's why:
+
+Operating System development and low-level programming require direct hardware access, fine-grained control over the development environment, and customizable toolchains - conditions where Linux significantly outperforms Windows in terms of flexibility, transparency, and developer support.
 
 ### Disadvantages of Using Windows
 
-+ **Closed source:** Windows' internals are not accessible for study or modification.
++ **Closed source:** Windows internals are not accessible for study or modification.
 + **Limited low-level access:** Windows restricts direct hardware access. Accessing hardware-level features often requires driver development and complex APIs.
 + **Proprietary toolchains:** Most of the powerful tools on Windows are proprietary, heavyweight, and tied to Windows-specific formats and standards.
-+ **Poor raw binary support:** Generating raw binary formats like `.bin` needed for bootloaders is not straightforward. Most assemblers default to PE (Portable Executable) format.
-+ **Hyper-V interface:** Windows' built-in virtualization may conflict with other VM software, complicating testing.
-+ **Dependency hell for tooling:** Setting up tools like `NASM`, `QEMU` and custom linkers on Windows requires extra configuration or WSL (Windows Subsystem for Linux). Just use Linux.
-+ **Unpredictable file I/O behavior:** Filesystems like NTFS can introduce quirks (e.g., extra metadata) that interfere with writing clean raw binaries.
++ **Poor raw binary support:** Generating raw binary formats like `.bin` (needed for bootloaders) is not straightforward. Most assemblers default to PE (Portable Executable) format.
++ **Hyper-V interface:** Windows' built-in virtualization can conflict with other VM software, complicating testing.
++ **Dependency hell for tooling:** Setting up tools like `NASM`, `QEMU` and custom linkers on Windows requires extra configuration or WSL (Windows Subsystem for Linux) or extensive configuration. Just use Linux.
++ **Unpredictable file I/O behavior:** Filesystems like NTFS can introduce quirks (e.g., metadata pollution) that interfere clean raw binary output.
 
 ### Advantages of Using Linux
 
@@ -103,11 +105,11 @@ sudo pacman -S nasm
 nasm -v
 ```
 
-+ `-S`: Install the package from the official repositories.
++ `-S`: Install the package from official repositories.
 
 ### Example Usage
 
-Compiling an assembly file, `bootloader.asm` into a raw binary file, `bootloader.bin`.
+Compiling an assembly file (`bootloader.asm`) into a raw binary file (`bootloader.bin`).
 
 ```bash
 nasm -f bin bootloader.asm -o bootloader.bin
@@ -117,7 +119,7 @@ nasm -f bin bootloader.asm -o bootloader.bin
 
 ## Text Editors
 
-This section is more of a personal preference. Keep in mind that Assembly programming demands precision. A misplaced comma or typo can lead to unpredictable behavior. Therefore, the choice of a text editor plays a critical role in minimizing errors, boosting productivity, and integrating smoothly with the rest of the development toolchain. Below is a list of great text editors.
+Assembly programming demands precision - every character matters. Your editor should minimize errors, support syntax awareness, and integrate smoothly into the toolchain. Below are some of the best options:
 
 ### Vim / Neovim
 
