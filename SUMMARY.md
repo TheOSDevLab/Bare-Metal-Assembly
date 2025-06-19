@@ -4,12 +4,6 @@
 
 ---
 
-## Introduction to Assembly
-
-+ [Welcome](./notes/README.md)
-
----
-
 ## Roadmap
 
 + [Main Roadmap File](./roadmap/README.md)
@@ -18,6 +12,7 @@
 
 ## Notes
 
++ [Introduction to Assembly](./notes/README.md)
 + [Setup Dev Env](./notes/00_setup_dev_env.md)
 
 ### Syntax
