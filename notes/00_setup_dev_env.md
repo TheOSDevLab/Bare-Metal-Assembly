@@ -60,9 +60,9 @@ An **assembler** is a tool that converts assembly language code (a human-readabl
 
 For OS development, especially x86 platforms, **NASM (Netwide Assembler)** is highly recommended due to:
     
-    + Readable and beginner-friendly Intel syntax.
-    + Excellent support for flat binaries (required for bootloaders and OS kernels).
-    + Active community and extensive documentation.
++ Readable and beginner-friendly Intel syntax.
++ Excellent support for flat binaries (required for bootloaders and OS kernels).
++ Active community and extensive documentation.
 
 ---
 
