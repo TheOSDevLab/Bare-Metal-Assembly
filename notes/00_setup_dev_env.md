@@ -137,6 +137,8 @@ Assembly programming demands precision - every character matters. Your editor sh
 + Hardcore terminal users.
 + Anyone building a minimalist, distraction-free dev setup.
 
+---
+
 ### Sublime Text
 
 **Sublime Text** is a lightweight yet powerful GUI text editor with great responsiveness and a focus on developer ergonomics.
@@ -158,6 +160,8 @@ Assembly programming demands precision - every character matters. Your editor sh
 + Developers who prefer graphical interfaces but want speed and flexibility.
 + Editing and reviewing larger files, multi-window workflows.
 
+---
+
 ### Visual Studio Code
 
 **VS Code** is a free, open-source, Electron-based code editor developed by Microsoft.
@@ -178,7 +182,9 @@ Assembly programming demands precision - every character matters. Your editor sh
 + Developers who prefer full IDE-like features without a full IDE.
 + Projects involving mixed-language development (e.g, C and Assembly).
 
-## Other Mentionable Editors
+---
+
+### Other Mentionable Editors
 
 + **Kate:** KDE's feature-rich GUI editor. Fast, supports sessions, terminal and syntax highlighting.
 + **Geany:** Lightweight GUI IDE with minimal dependencies. Great for older systems.
