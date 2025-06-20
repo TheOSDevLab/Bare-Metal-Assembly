@@ -2,15 +2,15 @@
 
 > **Random Quote:** Excuses are lies you sell yourself to avoid doing the work.
 
-Assembly language is essential for writing low-level code, especially in OS\_development. This roadmap is tailored for absolute beginners who want to learn x86 Assembly with a focus on building operating systems.
+Assembly language plays a critical role in low-level programming, particularly in operating system development. This roadmap is designed specifically for absolute beginners seeking to learn x86 Assembly with a focus on building operating systems from the ground up.
 
-Every topic comes with a focused project. Don't skip them. Real understanding comes from doing.
+Each topic is accompanied by a dedicated project to reinforce practical understanding. Learners are strongly encouraged to complete these projects, as hands-on experience is essential for mastering the material.
 
-> **Key Rule:** Learn the minimum to move forward. Use new instructions only when you need them. Don't waste time memorizing the whole x86 manual.
+> **Guiding Principle:** Learn only what is necessary to progress. Introduce new instructions as they become relevant. There is no need to memorize the entire x86 instruction set in advance.
 
 ---
 
-## Set up dev env
+## Set Up Development Environment
 
 + Install your assembler of choice. Recommended: **NASM**.
 
@@ -40,7 +40,6 @@ Every topic comes with a focused project. Don't skip them. Real understanding co
 
 ## Data Movement
 
-**Learn these:**
 + `MOV`, `XCHG`, `LEA`
 + Assembler directives: `equ`, `db` and its variants.
 
@@ -74,7 +73,7 @@ Every topic comes with a focused project. Don't skip them. Real understanding co
 
 ---
 
-## Stack operations
+## Stack Operations
 
 + `PUSH`, `POP`, `PUSHA`, `POPA`
 + `CALL`, `RET`
@@ -88,4 +87,4 @@ Every topic comes with a focused project. Don't skip them. Real understanding co
 
 ---
 
-> The journey is not over. More instructions like `LGDT`, `LIDT`, `INVLPG` will appear as you go deeper into OS development. Learn them when they are needed, not all at once. They will all be covered in this repository.
+> This learning path is incremental. Advanced instructions such as `LGDT`, `LIDT`, and `INVLPG` will be introduced later, as the complexity of OS development increases. These and other instructions will be covered in context throughout this repository.
