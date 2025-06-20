@@ -1,21 +1,29 @@
 # Contributing Guidelines
 
-Thanks for your interest in this project!
+> **Random Quote:** A man without self-control is like a city broken into and left without walls.
 
-This is a **personal Assembly for OS development notes repo**, built as I learn. I want to keep the content consistent with my own learning path and writing style. That means:
+Thank you for your interest in this project.
 
-## What You Can Do
+This repository serves as a personal collection of notes and examples on Assembly programming for operating system development, created as part of an ongoing learning journey. To maintain consistency in structure, tone, and progression, contributions are limited in scope.
 
-- **Report mistakes**: Typos, broken links, incorrect explanations, factual errors, all are fair game. Please open an issue or PR with the fix or report.
-- **Make suggestions**: If there's a topic you'd like me to cover in the future, feel free to open an issue and suggest it.
+---
 
-## What You Can't Do
+## Acceptable Contributions
 
-- Please **do not add new notes**, sections, or files yourself. I will only include topics I’ve already learned and documented myself.
-- No unsolicited PRs that introduce new content; they'll be closed.
++ **Report errors:** This includes typographical mistakes, broken links, factual inaccuracies, or unclear explanations. Please feel free to open an issue or submit a pull request with the correction.
++ **Make suggestions:** If you would like to recommend a topic for future inclusion, you are encouraged to open an issue with your suggestion.
 
-## Why This Restriction?
+---
 
-I want this to reflect my personal journey in learning OS development, written in my voice and pace. Think of this as my living notebook, just one that I'm sharing publicly.
+## Restricted Contributions
 
-Thanks for understanding!
++ **Adding new notes, sections, or files:** Only content that reflects subjects I have personally studied and documented will be included.
++ **Submitting unsolicited pull requests** that introduce new instructional material. Such contributions will be closed without review.
+
+---
+
+## Final Remarks
+
+This repository is intended to reflect my personal progress in learning OS development, written in my own words, at my own pace. It serves as a public-facing learning log, and maintaining its integrity requires limiting external contributions to feedback and suggestions.
+
+Thank you for your understanding and support.
