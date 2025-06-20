@@ -119,7 +119,7 @@ nasm -f bin bootloader.asm -o bootloader.bin
 
 ## Text Editors
 
-Assembly programming demands precision - every character matters. Your editor should minimize errors, support syntax awareness, and integrate smoothly into the toolchain. Below are some of the best options:
+Assembly programming demands precision, every character matters. Your editor should minimize errors, support syntax awareness, and integrate smoothly into the toolchain. Below are some of the best options:
 
 ### Vim / Neovim
 
@@ -190,6 +190,16 @@ Assembly programming demands precision - every character matters. Your editor sh
 + **Geany:** Lightweight GUI IDE with minimal dependencies. Great for older systems.
 + **Emacs:** A powerhouse, terminal-based editor.
 + **Micro:** Modern terminal-based editor with mouse support. Great alternative for Vim-haters who still want TUI editing.
+
+---
+
+### Recommendation
+
+For OS development:
+
++ **Primary editor:** `Neovim`. Ideal for fast, efficient workflows, especially if paired with terminal tooling.
++ **Secondary editor:** `Sublime Text`. Useful for multi-file navigation, code review, or when you need a visual layout.
++ I don't know about you, but I won't use `VS Code`.
 
 ---
 
