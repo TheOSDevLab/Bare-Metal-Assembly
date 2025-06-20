@@ -12,7 +12,11 @@ Each topic is accompanied by a dedicated project to reinforce practical understa
 
 ## Set Up Development Environment
 
-+ Install your assembler of choice. Recommended: **NASM**.
+This is covered [here](../notes/00_setup_dev_env.md)
+
++ Install a favourable Linux distribution.
++ Install your assembler of choice.
++ Install your text editor(s).
 
 ---
 
