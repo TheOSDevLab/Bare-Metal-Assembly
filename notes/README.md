@@ -34,3 +34,9 @@ Assembly is primarily used in domains where precise control over hardware is req
 3. **Improved debugging and optimization:** Even in high-level projects, understanding Assembly enables better debugging (e.g., reading disassembly in GDB) and writing optimized routines when necessary.
 4. **Enhanced reverse engineering skills:** Security professionals and reverse engineers rely heavily on Assembly to understand binaries, detect vulnerabilities, and write exploits.
 5. **Empowerment:** There is a distinct advantage in knowing how to "drop down" to bare metal when necessary. It demystifies the black box that most programmers rely on.
+
+---
+
+## Next Step
+
+[Setup Development Environment](./00_setup_dev_env.md)
