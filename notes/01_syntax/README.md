@@ -1,18 +1,19 @@
+# Assembly Syntax
 
-Stuff to cover:
+> **Random Quote:** Trust in the Lord with all your heart, and do not lean on your own understanding.
 
-1. **Instruction format & Operand order:** `mnemonic destination, source`.
+This section contains notes on the two main syntax styles used in x86 Assembly: **Intel** and **AT&T**. Understanding these syntaxes is essential for reading, writing, and translating low-level code across different tools and environments.
 
-2. **Register naming:** `eax`, `%eax`.
+Most assemblers and compilers (such as NASM, GAS, and GCC) support one or both of these styles. Choosing the right syntax depends on the assembler in use and personal or project-specific preferences.
 
-3. **Constants/literals:** `5`, `$5`.
+The majority of examples in this repository use **Intel syntax** for the following reasons:
 
-4. **Memory access:** `[eax]`, `(%eax)`
++ It is more readable and beginner-friendly.
++ It is supported by the **NASM** assembler, which will be used throughout this repository.
 
-5. **Instruction suffixes (AT&T only):** `movb`, `movw`, ...
+**AT&T syntax** will be used later when writing inline Assembly within C code in the operating system's kernel.
 
-6. **Size specifiers (Intel only):** `byte ptr`, `word ptr`, ...
+### Links
 
-7. **Comment style:** `;`, `#`.
-
-8. **Label syntax and jump targets:** `label`, `.label`.
++ [**Intel**](./00_intel.md)
++ [**AT&T**](./01_AT&T.md)
