@@ -17,3 +17,5 @@ The majority of examples in this repository use **Intel syntax** for the followi
 
 + [**Intel**](./00_intel.md)
 + [**AT&T**](./01_AT&T.md)
+
+> **Note:** You do not need to study both syntax styles immediately. If you are following along with NASM and Intel syntax, you may skip AT&T syntax for now and return to it later when it becomes relevant (when writing inline Assembly in C using GCC).
