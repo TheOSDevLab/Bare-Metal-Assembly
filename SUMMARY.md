@@ -31,12 +31,18 @@
 
 ## Projects
 
++ [Projects](./projects/README.md)
+
 ---
 
 ## Resources
 
++ [Resources](./resources/README.md)
+
 ---
 
 ## Tools
+
++ [Tools](./tools/README.md)
 
 ---
