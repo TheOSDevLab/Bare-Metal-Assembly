@@ -31,3 +31,12 @@
 
 ## Projects
 
+---
+
+## Resources
+
+---
+
+## Tools
+
+---
