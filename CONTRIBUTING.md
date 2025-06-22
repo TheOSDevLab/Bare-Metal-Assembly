@@ -4,7 +4,7 @@
 
 Thank you for your interest in this project.
 
-This repository serves as a personal collection of notes and examples on Assembly programming for operating system development, created as part of an ongoing learning journey. To maintain consistency in structure, tone, and progression, contributions are limited in scope.
+This repository serves as a personal collection of notes and examples on **Assembly programming** for operating system development, created as part of an ongoing learning journey. To maintain consistency in structure, tone, and progression, contributions are limited in scope.
 
 ---
 
