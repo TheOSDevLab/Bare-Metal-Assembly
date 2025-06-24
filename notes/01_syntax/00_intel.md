@@ -50,6 +50,7 @@ Comments are written using a semicolon (`;`). Everything after the semicolon on 
 **Example:**
 
 ```asm
+; This whole line is a comment.
 mov ah, 0x0E    ; This is a comment.
 mov al, 'X'     ; Writing the character X to the al register.
 ```
@@ -76,7 +77,7 @@ mov dx, 0x03F8  ; dx is a register. Just write the name as is.
 mov al, 65      ; al is a register.
 ```
 
-Incase you don't know about registers, check out [this file](https://github.com/brogrammer232/Crafting-an-OS-Notes-and-Insights/blob/main/notes/01_computer_architecture/02_registers.md) in a different repository.
+In case you don't know/remember about registers, check out [this file](https://github.com/brogrammer232/Crafting-an-OS-Notes-and-Insights/blob/main/notes/01_computer_architecture/02_registers.md) in another repository.
 
 ---
 
@@ -97,7 +98,7 @@ mov al, 'H'
 mov bl, 12
 ```
 
-These bases are discussed in [this file](https://github.com/brogrammer232/Crafting-an-OS-Notes-and-Insights/blob/main/notes/01_computer_architecture/08_number_systems.md) in a different repository.
+These bases are discussed in [this file](https://github.com/brogrammer232/Crafting-an-OS-Notes-and-Insights/blob/main/notes/01_computer_architecture/08_number_systems.md) in another repository.
 
 ---
 
@@ -174,7 +175,13 @@ Labels can be global (accessible across files/modules) or local (used only withi
 + A local label:
 
     ```asm
-    label1:
+    label1:     ;This is a global label.
 
     .label2:    ;This is a local label.
     ```
+
+---
+
+## Final Remarks
+
+You may have found some parts of this file difficult to understand. Don't worry, they will make sense soon. Keep pushing.
