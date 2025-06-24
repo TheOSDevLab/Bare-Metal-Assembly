@@ -12,7 +12,7 @@ Each topic is accompanied by a dedicated project to reinforce practical understa
 
 ## Set Up Development Environment
 
-This is covered [here](../notes/00_setup_dev_env.md)
+This is covered [here](../notes/00_setup_dev_env.md).
 
 + Install a favourable Linux distribution.
 + Install your assembler of choice.
@@ -26,12 +26,12 @@ This is covered in these files: [Intel](../notes/01_syntax/00_intel.md), [AT&T](
 
 + Choose your syntax (Intel or AT&T). Both will be covered.
 + Instruction format and operand order.
++ Comment style.
 + Register naming.
 + Constants/literals.
 + Memory access.
 + Instruction suffixes (AT&T only).
 + Size specifiers (Intel only).
-+ Comment style.
 + Label syntax and jump targets.
 
 ---
