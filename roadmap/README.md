@@ -22,10 +22,7 @@ This is covered [here](../notes/00_setup_dev_env.md)
 
 ## Syntax
 
-This is covered in these files:
-
-    - [Intel](../notes/01_syntax/00_intel.md)
-    - [AT&T](../notes/01_syntax/01_AT&T.md)
+This is covered in these files: [Intel](../notes/01_syntax/00_intel.md), [AT&T](../notes/01_syntax/01_AT&T.md).
 
 + Choose your syntax (Intel or AT&T). Both will be covered.
 + Instruction format and operand order.
