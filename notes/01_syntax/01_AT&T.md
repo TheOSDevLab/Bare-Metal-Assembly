@@ -40,19 +40,19 @@ This is the opposite of Intel syntax.
 addl $5, %eax   # Add 5 to the value in EAX.
 ```
 
-The `l`, `$`, and `%` may be confusing you, they are explained below.
+The `l`, `$`, and `%` may seem confusing at first; they are explained in the sections below.
 
 ---
 
 ## Comment Style
 
-Comments begin with a hash symbol (`#`). Everything after the `#`, on the same line is treated as a comment. Assembly supports only single-line comments.
+Comments begin with a hash symbol (`#`). Everything after the `#` on the same line is treated as a comment. Assembly supports only single-line comments.
 
 **Example:**
 
 ```asm
 # This whole line is a comment.
-mov $10, %eax   # This is another comment.
+movl $10, %eax   # This is another comment.
 ```
 
 ---
@@ -96,7 +96,7 @@ Memory operands are written using **parentheses (`()`)**, not square brackets li
 
 ```asm
 movl (%eax), %ebx   # Load the value from memory at address in EAX into EBX.
-movl %ebx, (%eax)   # Store value in EBX into memory at EAX.
+movl %ebx, (%eax)   # Store the value in EBX into the memory location pointed to by EAX.
 ```
 
 **Example:** Indexed and scaled addressing.
@@ -107,7 +107,7 @@ movl 8(%ebx, %ecx, 4), %eax
 
 This accesses memory at: `EAX = [EBX + ECX*4 + 8]`
 
-+ `displacement(base, index, scale)` equivalent to `disp + base + index * scale`.
++ `displacement(base, index, scale)` is equivalent to `disp + base + index * scale`.
 
 **Example:** With labels.
 
@@ -119,7 +119,7 @@ movw var(%bp), %ax  # Load word from offset of 'var' relative to BP.
 
 ## Instruction Suffixes
 
-In AT&T syntax, instruction mnemonics include a **size suffix** to specify operand width. This is different from Intel syntax, which uses words as size specifiers.
+In AT&T syntax, instruction mnemonics include a **size suffix** to specify operand width. This differs from Intel syntax, which uses keywords like `byte`, `word`, and `dword` to indicate size.
 
 + `b`: Byte (8-bit).
 + `w`: Word (16-bit).
@@ -141,7 +141,7 @@ These suffixes are required because GAS does not infer operand size from the reg
 
 ## Label Syntax and Jump Targets
 
-Labels in AT&T syntax follow the same structure as in Intel syntax. They are defined using a name followed by a colon (`:`) and must appear on their own line or before an instruction. They are also case-sensitive.
+Labels in AT&T syntax follow the same structure as in Intel syntax. They are defined using a name followed by a colon (`:`) and must appear on their own line or before an instruction. Labels are also case-sensitive.
 
 **Example:** Defining a label.
 
@@ -156,7 +156,7 @@ start:  # This is a label.
 jmp start   # Jump to 'start'.
 ```
 
-The difference between AT&T and Intel syntax when it comes to labels is with local labels.
+The main difference between AT&T and Intel syntax regarding labels lies in the handling of local labels.
 
 + **Global** labels are defined without a prefix (e.g., `main:`).
 + **Local** labels use numeric labels and suffixes (`1f`, `1b`) for forward and backward jumps.
@@ -175,5 +175,3 @@ global_label:
 + `1b`: Backward to the previous label named `1:`.
 
 This is common in GAS-style Assembly for temporary or inline jumps.
-
-
