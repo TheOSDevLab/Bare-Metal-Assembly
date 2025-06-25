@@ -38,6 +38,17 @@ This is covered in these files: [Intel](../notes/01_syntax/00_intel.md), [AT&T](
 
 ## Boilerplate Code
 
+This is covered in [this file](../notes/02_boilerplate.md).
+
++ Assembly instructions:
+    - [`JMP`](../notes/03_assembly_instructions/jmp.md)
+
++ Assembler directives:
+    - [`ORG`](../notes/04_assembler_directives/org.md)
+    - [`BITS`](../notes/04_assembler_directives/bits.md)
+    - [`TIMES`](../notes/04_assembler_directives/times.md)
+    - [`DB,DW,DD,DQ`](../notes/04_assembler_directives/db.md)
+
 + Boot signature.
 + Why `ORG 0x7C00`, `BITS 16`.
 + 512 bytes restriction.
