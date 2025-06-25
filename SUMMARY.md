@@ -23,7 +23,11 @@
 
 ### Assembly Instructions
 
++ [Assembly Instructions](./notes/03_assembly_instructions/README.md)
+
 ### Assembler Directives
+
++ [Assembler Directives](./notes/04_assembler_directives/README.md)
 
 ### BIOS Interrupts
 
