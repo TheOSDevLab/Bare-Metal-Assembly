@@ -5,6 +5,7 @@
 ## Key Topics
 
 + [Overview](#overview)
+    - [Syntax](#syntax)
 + [Usage Scenarios](#usage-scenarios)
     - [Padding the Boot Sector to 512 Bytes](#padding-the-boot-sector-to-512-bytes)
     - [Reserving or Initializing Memory](#reserving-or-initializing-memory)
