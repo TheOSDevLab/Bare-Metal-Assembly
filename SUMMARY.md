@@ -21,13 +21,26 @@
 + [Intel Syntax](./notes/01_syntax/00_intel.md)
 + [AT&T Syntax](./notes/01_syntax/01_AT&T.md)
 
+---
+
 ### Assembly Instructions
 
 + [Assembly Instructions](./notes/03_assembly_instructions/README.md)
 
++ [`JMP`](./notes/03_assembly_instructions/jmp.md)
+
+---
+
 ### Assembler Directives
 
 + [Assembler Directives](./notes/04_assembler_directives/README.md)
+
++ [`DB,DW,DD,DQ`](./notes/04_assembler_directives/db.md)
++ [`BITS`](./notes/04_assembler_directives/bits.md)
++ [`ORG`](./notes/04_assembler_directives/org.md)
++ [`TIMES`](./notes/04_assembler_directives/times.md)
+
+---
 
 ### BIOS Interrupts
 
