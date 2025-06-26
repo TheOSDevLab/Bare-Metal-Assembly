@@ -57,8 +57,13 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ## Data Movement
 
-+ `MOV`, `XCHG`, `LEA`
-+ Assembler directives: `equ`, `db` and its variants.
++ Assembly instructions:
+    - [`MOV`](../notes/03_assembly_instructions/mov.md)
+    - [`XCHG`](../notes/03_assembly_instructions/xchg.md)
+    - [`LEA`](../notes/03_assembly_instructions/lea.md)
+
++ Assembler directives:
+    - [`EQU`](../notes/04_assembler_directives/equ.md)
 
 ---
 
