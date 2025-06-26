@@ -44,6 +44,8 @@
 
 ### BIOS Interrupts
 
++ [BIOS Interrupts](./notes/05_bios_interrupts/README.md)
+
 ---
 
 ## Projects
