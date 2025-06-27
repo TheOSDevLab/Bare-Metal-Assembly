@@ -14,9 +14,12 @@ Each topic is accompanied by a dedicated project to reinforce practical understa
 
 This is covered [here](../notes/00_setup_dev_env.md).
 
-+ Install a favourable Linux distribution.
-+ Install your assembler of choice.
-+ Install your text editor(s).
+**What will be covered:**
+
++ Determining the best platform.
++ Installing an assembler.
++ Installing QEMU.
++ Installing text editor(s).
 
 ---
 
@@ -24,7 +27,8 @@ This is covered [here](../notes/00_setup_dev_env.md).
 
 This is covered in these files: [Intel](../notes/01_syntax/00_intel.md), [AT&T](../notes/01_syntax/01_AT&T.md).
 
-+ Choose your syntax (Intel or AT&T). Both will be covered.
+**What will be covered:**
+
 + Instruction format and operand order.
 + Comment style.
 + Register naming.
@@ -40,8 +44,13 @@ This is covered in these files: [Intel](../notes/01_syntax/00_intel.md), [AT&T](
 
 This is covered in [this file](../notes/02_boilerplate.md).
 
-+ Assembly instructions:
-    - [`JMP`](../notes/03_assembly_instructions/jmp.md)
+**What will be covered:**
+
++ Boot signature.
++ Why `ORG 0x7C00` and `BITS 16`?
++ 512 bytes restriction.
+
+**Learn these first:**
 
 + Assembler directives:
     - [`ORG`](../notes/04_assembler_directives/org.md)
@@ -49,13 +58,11 @@ This is covered in [this file](../notes/02_boilerplate.md).
     - [`TIMES`](../notes/04_assembler_directives/times.md)
     - [`DB,DW,DD,DQ`](../notes/04_assembler_directives/db.md)
 
-+ Boot signature.
-+ Why `ORG 0x7C00`, `BITS 16`.
-+ 512 bytes restriction.
-
 ---
 
 ## Data Movement
+
+**Learn These:**
 
 + Assembly instructions:
     - [`MOV`](../notes/03_assembly_instructions/mov.md)
@@ -64,6 +71,10 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 + Assembler directives:
     - [`EQU`](../notes/04_assembler_directives/equ.md)
+
+**Work on these projects:**
+
++ Projects:
 
 ---
 
