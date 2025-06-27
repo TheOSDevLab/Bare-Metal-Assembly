@@ -2,8 +2,6 @@
 
 > **Random Quote:** Discipline is the bridge between goals and accomplishment.
 
----
-
 ## Key Topics
 
 + [Overview](#overview)
