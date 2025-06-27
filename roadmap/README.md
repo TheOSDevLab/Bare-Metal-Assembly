@@ -65,6 +65,8 @@ This is covered in [this file](../notes/02_boilerplate.md).
 + Assembler directives:
     - [`EQU`](../notes/04_assembler_directives/equ.md)
 
++ Projects:
+
 ---
 
 ## Arithmetic and Logic
