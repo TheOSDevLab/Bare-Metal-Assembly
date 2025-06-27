@@ -1,6 +1,6 @@
 # `DB,DW,DD,DQ`
 
-> **Random Quote:** Discipline is the bridge between goals and accomplishemnt.
+> **Random Quote:** Discipline is the bridge between goals and accomplishment.
 
 ---
 
@@ -22,7 +22,7 @@
 
 ## Overview
 
-`DB` is short for **Define Byte**. This instruction, along with its variants, allow you to embed bytes, words, and other sized values directly into your program's binary output.
+`DB` is short for **Define Byte**. This directive, along with its variants, allow you to embed bytes, words, and other sized values directly into your program's binary output.
 
 These directives are used to:
 
@@ -31,7 +31,7 @@ These directives are used to:
 + Embed machine instructions, if necessary.
 + Lay out precise memory layouts for low-level hardware interfacing.
 
-Like every other assembler directive, these do not generate executable instructions, but rather allocate specific values into the output binary.
+Like all assembler directives, these do not generate executable instructions, but rather allocate specific values into the output binary.
 
 ### Syntax
 
@@ -55,11 +55,11 @@ This directive is used to emit one or more individual bytes (8-bits). That is `0
 
 ```asm
 db 0x41         ; One byte in hexadecimal.
-db 'H', 'i'     ; Multiple, one byte characters.
-db 10, 20, 30   ; Multiple, one byte decimals.
+db 'H', 'i'     ; Multiple one-byte characters.
+db 10, 20, 30   ; Multiple one-byte decimals.
 ```
 
-This directives allows strings. Strings are interpreted as a **sequence of characters**, with each character treated as a separate byte. This makes it easier and faster to type strings.
+This directive allows strings. Strings are interpreted as a **sequence of characters**, with each character treated as a separate byte. This makes it easier and faster to type strings.
 
 **Example:**
 
@@ -74,20 +74,20 @@ db 'H', 'e', 'l', 'l', 'o', 0
 
 ### Define Word (`DW`)
 
-A word is **2 bytes (16-bits)**. Each value must fit within 16-bits (i.e., `0-65535`). If a value is longer than 2 characters, only the first two are used.
+A word is **2 bytes (16-bits)**. Each value must fit within 16 bits (i.e., `0-65535`). If a value is longer than 2 characters, only the first two are used.
 
-**Note:** These bytes are stored in **little-endian** order on x86 CPUs: low byte first, high byte second. This applies to all the other multi-byte directives below. If needed, read about endianness [here](https://github.com/brogrammer232/Crafting-an-OS-Notes-and-Insights/blob/main/notes/01_computer_architecture/14_endianness.md).
+**Note:** These bytes are stored in **little-endian** order on x86 CPUs (low byte first, high byte second). This applies to all the other multi-byte directives below. If needed, read about endianness [here](https://github.com/brogrammer232/Crafting-an-OS-Notes-and-Insights/blob/main/notes/01_computer_architecture/14_endianness.md).
 
 **Example:**
 
 ```asm
 dw 0x1234   ; Stored as 0x34 0x12.
-dw 'AB'     ; Stored as 'B' 'A'.
+dw 'AB'     ; Stored as `'B'` followed by `'A'`.
 ```
 
 ### Define Double (`DD`)
 
-A **double word** is **4 bytes (32-bits)**. Each value must fit within 32-bits. This is often used for defining 32-bit pointers, addresses, or constants.
+A **double word** is **4 bytes (32-bits)**. Each value must fit within 32 bits. This is often used for defining 32-bit pointers, addresses, or constants.
 
 **Example:**
 
@@ -97,7 +97,7 @@ dd 0x12345678   ; Stored as 0x78 0x56 0x34 0x12.
 
 ### Define Quad (`DQ`)
 
-A **quad word** is **8 bytes (64-bits)**. Each value must fit within 64-bits. It is used for defining 64-bit constants or addresses.
+A **quad word** is **8 bytes (64-bits)**. Each value must fit within 64-bits. It is used for defining 64 bit constants or addresses.
 
 **Example:**
 
@@ -107,7 +107,7 @@ dq 0x1122334455667788 ; Stored as '88 77 66 55 44 33 22 11'.
 
 ### Define Ten (`DT`)
 
-For this, each value must fit within **10 bytes (80-bits)**. It is rarely used. It's used for defining **80-bit floating point values** (used with `fldt`, `fstpt`, etc. in x87 FPU operations).
+Each value must fit within **10 bytes (80-bits)**. This directive is rarely used. It's used for defining **80-bit floating point values** (used with `fldt`, `fstpt`, etc. in x87 FPU operations).
 
 ---
 
@@ -144,7 +144,7 @@ count dup(value)
 + `count`: How many times the value should be repeated.
 + `value`: What to repeat (can be a byte, word, string, or expression, depending on context).
 
-**Examples:** Using with the discussed directives.
+**Examples: Using the discussed directives.**
 
 ```asm
 db 5 dup(0)         ; Expands to: `db 0, 0, 0, 0, 0`.
