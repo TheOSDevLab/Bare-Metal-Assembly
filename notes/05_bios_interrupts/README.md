@@ -50,7 +50,7 @@ The IVT is located at **memory address** `0x0000:0000` and contains 256 entries 
 
 ## About This Directory
 
-This directory contains focused explanations of **BIOS interrupts** as used in x86 Assembly programming with Intel syntax. Each subdirectory covers a specific category of BIOS interrupt services (such as `int10` for video services, `int13` for disk services, and others), explaining their purpose, usage, and relevance in low-level development.
+This directory contains focused explanations of **BIOS interrupts** as used in x86 Assembly programming with Intel syntax. Each subdirectory covers a specific category of BIOS interrupt services (such as `int10h` for video services, `int13h` for disk services, and others), explaining their purpose, usage, and relevance in low-level development.
 
 The links listed below are arranged in **ascending order** for ease of reference. However, you are strongly advised not to study these interrupts in ascending order, as doing so may disrupt the natural learning progression.
 
