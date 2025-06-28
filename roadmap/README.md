@@ -78,9 +78,22 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ---
 
-## Arithmetic and Logic
+## Arithmetic
 
-+ `ADD`, `SUB`, `INC`, `DEC`
+**Learn These:**
+
++ Assembly Instructions:
+    - [`ADD`](../notes/03_assembly_instructions/add.md)
+    - [`SUB`](../notes/03_assembly_instructions/sub.md)
+    - [`INC`](../notes/03_assembly_instructions/inc.md)
+    - [`DEC`](../notes/03_assembly_instructions/dec.md)
+
+**Note:** The instructions `MUL`, `IMUL`, `DIV`, and `IDIV` do exist, but they have been omitted here, as they are seldom required in typical bootloader development.
+
+---
+
+## Bitwise Operations
+
 + `AND`, `OR`, `XOR`, `NOT`, `SHL`, `SHR`
 
 ---
