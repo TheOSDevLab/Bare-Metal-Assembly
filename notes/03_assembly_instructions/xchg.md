@@ -5,6 +5,8 @@
 ## Key Topics
 
 + [Overview](#overview)
+    - [Syntax](#syntax)
+    - [Examples](#examples)
 
 ---
 
@@ -49,13 +51,13 @@ xchg ax, bx     ; AX = 0x5678, BX = 0x1234
 #### Register and Memory
 
 ```asm
-myvar dw 0xAAAA     ; Note that the value is 2 bytes.
+myvar dw 0xAAAA         ; Note that the value is 2 bytes.
 
-mov ax, 0x5555      ; This is also 2 bytes.
-xchg ax, [myvar]    ; AX = 0xAAAA, [myvar] = 0x5555
+mov ax, 0x5555          ; This is also 2 bytes.
+xchg word [myvar], ax   ; [myvar] = 0x5555, AX = 0xAAAA
 ```
 
-**Quick explanation:** `myvar` is an address in memory. It can be anything (like `0x2344`). The brackets mean, take the value at that memory address, which is `0xAAAA`. This code example swaps the contents of `AX` with the word stored at label `myvar`.
+**Quick explanation:** `myvar` is an address in memory. It can be anything (like `0x2344`). The brackets mean, take the value at that memory address, which is `0xAAAA`. The `word` size specifier tells the instruction to take 2 bytes from the memory address. This code example swaps the contents of `AX` with the word stored at label `myvar`.
 
 #### Invalid Example
 
