@@ -22,6 +22,8 @@ This instruction is particularly useful for:
 + Address calculations (e.g., array elements).
 + Efficiently computing values without affecting flags.
 
+---
+
 ### Syntax
 
 ```asm
@@ -33,10 +35,10 @@ lea destination, source
 
 **Note:** `LEA` can only operate on memory expressions written in square brackets. It does not support bare constants or immediate values without brackets.
 
-    ```asm
-    lea ax, 0x1234      ; Invalid because there are no brackets.
-    lea ax, [0x1234]    ; Valid because it's a memory address expression.
-    ```
+```asm
+lea ax, 0x1234      ; Invalid because there are no brackets.
+lea ax, [0x1234]    ; Valid because it's a memory address expression.
+```
 
 ---
 
