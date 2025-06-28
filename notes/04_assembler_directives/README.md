@@ -41,5 +41,6 @@ Instead, follow the recommended sequence provided in the project's learning [roa
 
 + [`BITS`](./bits.md)
 + [`DB,DW,DD,DQ`](./db.md)
++ [`EQU`](./equ.md)
 + [`ORG`](./org.md)
 + [`TIMES`](./times.md)
