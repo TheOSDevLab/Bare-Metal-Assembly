@@ -7,6 +7,7 @@
 + [Platform](#platform)
 + [Assembler](#assembler)
 + [Installing NASM on Linux](#installing-nasm-on-linux)
++ [Installing QEMU](#installing-qemu)
 + [Text Editors](#text-editors)
 
 ---
@@ -114,6 +115,43 @@ Compiling an assembly file (`bootloader.asm`) into a raw binary file (`bootloade
 ```bash
 nasm -f bin bootloader.asm -o bootloader.bin
 ```
+
+---
+
+## Installing QEMU
+
+**QEMU (Quick EMUlator)** is a **hardware emulator and virtualizer**. It allows you to run operating systems and programs designed for one hardware platform on another, making it an essential tool for low-level software development.
+
+In operating system development, QEMU is particularly useful because:
+
++ It emulates a full machine (including CPU, memory, I/O devices, and peripherals) without needing actual hardware.
++ It boot raw binaries and ISO images, perfect for testing custom bootloaders and kernels.
++ It supports debugging features like GDB integration and instruction tracing.
++ It provides fast iteration: no need to reboot real hardware.
++ It's scriptable and consistent, perfect for CI setups or automated builds.
+
+### Installing on Void Linux
+
+```bash
+sudo xbps-install -S qemu qemu-system-x86_64 qemu-img
+```
+
+### Installing on Debian Distributions
+
+```bash
+sudo apt install qemu-system-x86
+
+# Optional tools
+sudo apt install qemu-utils
+```
+
+### Installing on Arch Linux
+
+```bash
+sudo pacman -Syu qemu
+```
+
+This installs the full QEMU suite, including support for x86 systems.
 
 ---
 
