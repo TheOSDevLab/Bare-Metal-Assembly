@@ -53,6 +53,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
 **Learn these first:**
 
 + Assembler directives:
+    - [Introduction](../notes/04_assembler_directives/README.md)
     - [`ORG`](../notes/04_assembler_directives/org.md)
     - [`BITS`](../notes/04_assembler_directives/bits.md)
     - [`TIMES`](../notes/04_assembler_directives/times.md)
@@ -65,12 +66,17 @@ This is covered in [this file](../notes/02_boilerplate.md).
 **Learn These:**
 
 + Assembly instructions:
+    - [Introduction](../notes/03_assembly_instructions/README.md)
     - [`MOV`](../notes/03_assembly_instructions/mov.md)
     - [`XCHG`](../notes/03_assembly_instructions/xchg.md)
     - [`LEA`](../notes/03_assembly_instructions/lea.md)
 
 + Assembler directives:
     - [`EQU`](../notes/04_assembler_directives/equ.md)
+
++ BIOS interrupt:
+    - [Introduction](../notes/05_bios_interrupts/README.md)
+    - [`INT 10h 0Eh`](../notes/05_bios_interrupts/int10h/0Eh.md)
 
 **Work on these projects:**
 
