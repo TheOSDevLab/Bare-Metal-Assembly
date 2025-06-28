@@ -125,10 +125,10 @@ nasm -f bin bootloader.asm -o bootloader.bin
 In operating system development, QEMU is particularly useful because:
 
 + It emulates a full machine (including CPU, memory, I/O devices, and peripherals) without needing actual hardware.
-+ It boot raw binaries and ISO images, perfect for testing custom bootloaders and kernels.
++ It boots raw binaries and ISO images, making it ideal for testing custom bootloaders and kernels.
 + It supports debugging features like GDB integration and instruction tracing.
 + It provides fast iteration: no need to reboot real hardware.
-+ It's scriptable and consistent, perfect for CI setups or automated builds.
++ It is scriptable and consistent, making it well-suited for CI setups and automated testing environments.
 
 ### Installing on Void Linux
 
@@ -136,7 +136,7 @@ In operating system development, QEMU is particularly useful because:
 sudo xbps-install -S qemu qemu-system-x86_64 qemu-img
 ```
 
-### Installing on Debian Distributions
+### Installing on Debian-Based Distributions
 
 ```bash
 sudo apt install qemu-system-x86
@@ -151,7 +151,7 @@ sudo apt install qemu-utils
 sudo pacman -Syu qemu
 ```
 
-This installs the full QEMU suite, including support for x86 systems.
+This installs the complete QEMU suite, including support for x86 system emulation.
 
 ---
 
