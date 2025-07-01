@@ -61,6 +61,21 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ---
 
+## BIOS Interrupts Introduction
+
+**Learn These:**
+
++ [Introduction to BIOS interrupts](../notes/05_bios_interrupts/README.md)
++ [BIOS INT 10h](../notes/05_bios_interrupts/int10h/README.md)
++ [BIOS INT 10h 00h](../notes/05_bios_interrupts/int10h/00h.md)
++ [BIOS INT 10h 0Eh](../notes/05_bios_interrupts/int10h/0Eh.md)
+
+**Project:**
+
++ [Project1](#)
+
+---
+
 ## Data Movement
 
 **Learn These:**
@@ -78,9 +93,8 @@ This is covered in [this file](../notes/02_boilerplate.md).
     - [Introduction](../notes/05_bios_interrupts/README.md)
     - [`INT 10h 0Eh`](../notes/05_bios_interrupts/int10h/0Eh.md)
 
-**Work on these projects:**
+**Projects:**
 
-+ Projects:
 
 ---
 
