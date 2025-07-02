@@ -7,6 +7,7 @@
 + [Objective](#objective)
 + [Code Summary](#code-summary)
 + [Practice Areas](#practice-areas)
++ [Run](#run)
 
 ---
 
@@ -34,5 +35,15 @@ This program will make you practice using the following:
 + BIOS video interrupts: `INT 10h` function `00h` and `0Eh`.
 + Registers: `AH`, `AL`, `BX`, etc.
 + Basic instructions: `MOV`, `INT`, `HLT`.
+
+### Run
+
+To run the bootloader, execute the `run.sh` script.
+
+```sh
+./run.sh
+```
+
+This script uses `NASM` to assemble `main.asm` into a bootable flat binary (`main.img`) and launches it in QEMU for testing.
 
 ---
