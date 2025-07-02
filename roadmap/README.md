@@ -72,7 +72,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 **Project:**
 
-+ [Project1](#)
++ [Print Character](../projects/01_bios_interrupts/project001/README.md)
 
 ---
 
