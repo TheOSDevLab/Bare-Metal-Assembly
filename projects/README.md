@@ -40,9 +40,10 @@ Projects are grouped by topic, reflecting the order of concepts in the roadmap:
 
 Each project is organized into its own subdirectory and contains:
 
-+ `README.md`: A description of the project and learning objectives.
-+ `main.asm`: The main source file.
-+ Optional files (e.g., binaries, debug logs, diagrams, or test inputs).
++ `README.md`: Project description and learning objectives.
++ `main.asm`: Main Assembly source file.
++ `run.sh`: Bash script to build and run the project.
++ Optional files: May include binaries, debug logs, diagrams, or test inputs.
 
 ---
 
