@@ -17,6 +17,8 @@ This directory contains practical Assembly projects designed to reinforce the co
 
 For best results, it is strongly recommended that you complete the projects in the order outlined in the [roadmap](../roadmap/README.md). Each project builds on concepts introduced in the previous one, ensuring a smooth progression from basic data movement to more advanced control flow and memory manipulation. Skipping ahead may result in confusion or overlooked foundational skills that are essential for later stages of OS development.
 
+> **Note:** All projects in this directory are written in Intel syntax and are designed to run in real mode (16-bit), typically from a bootloader environment.
+
 ---
 
 ## Categories
