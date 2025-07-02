@@ -52,6 +52,9 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 **Learn these first:**
 
++ Assembly instruction:
+    - [`HLT`](../notes/03_assembly_instructions/hlt.md)
+
 + Assembler directives:
     - [Introduction](../notes/04_assembler_directives/README.md)
     - [`ORG`](../notes/04_assembler_directives/org.md)
