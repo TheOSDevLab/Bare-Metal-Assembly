@@ -25,14 +25,14 @@ For best results, it is strongly recommended that you complete the projects in t
 
 Projects are grouped by topic, reflecting the order of concepts in the roadmap:
 
-+ [BIOS Interrupts](./01_bios_interrupts)
-+ [Data Movement](./02_data_movement)
-+ [Arithmetic](./03_arithmetic)
-+ [Bitwise Operations](./04_bitwise_operations)
-+ [Conditionals](./05_conditionals)
-+ [Loops](./06_loops)
-+ [Strings](./07_strings)
-+ [Stack](./08_stack)
++ [BIOS Interrupts](./01_bios_interrupts/README.md)
++ [Data Movement](./02_data_movement/README.md)
++ [Arithmetic](./03_arithmetic/README.md)
++ [Bitwise Operations](./04_bitwise_operations/README.md)
++ [Conditionals](./05_conditionals/README.md)
++ [Loops](./06_loops/README.md)
++ [Strings](./07_strings/README.md)
++ [Stack](./08_stack/README.md)
 
 ---
 
