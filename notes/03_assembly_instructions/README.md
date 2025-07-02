@@ -37,6 +37,7 @@ Instead, follow the recommended sequence provided in the project's learning [roa
 
 ## Links
 
++ [`HLT`](hlt.md)
 + [`LEA`](lea.md)
 + [`MOV`](mov.md)
 + [`XCHG`](xchg.md)
