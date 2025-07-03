@@ -17,6 +17,6 @@ This directory contains beginner-friendly projects that focus on **data movement
 
 ## Links
 
-These projects are arranged in the order in which they appear in the roadmap [roadmap](../roadmap/README.md).
+These projects are arranged in the order in which they appear in the roadmap [roadmap](../../roadmap/README.md).
 
 
