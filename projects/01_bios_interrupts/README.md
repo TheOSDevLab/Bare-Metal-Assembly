@@ -19,7 +19,7 @@ Each project focuses on a specific interrupt or function, helping you to underst
 
 ## Links
 
-These projects are arranged in the order in which they appear in the [roadmap](../roadmap/README.md).
+These projects are arranged in the order in which they appear in the [roadmap](../../roadmap/README.md).
 
 + [Print Character with `0Eh`](./project001/README.md)
 
