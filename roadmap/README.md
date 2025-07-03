@@ -92,10 +92,6 @@ This is covered in [this file](../notes/02_boilerplate.md).
 + Assembler directives:
     - [`EQU`](../notes/04_assembler_directives/equ.md)
 
-+ BIOS interrupt:
-    - [Introduction](../notes/05_bios_interrupts/README.md)
-    - [`INT 10h 0Eh`](../notes/05_bios_interrupts/int10h/0Eh.md)
-
 **Projects:**
 
 
