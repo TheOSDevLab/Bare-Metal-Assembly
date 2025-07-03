@@ -21,6 +21,6 @@ Each project focuses on a specific interrupt or function, helping you to underst
 
 These projects are arranged in the order in which they appear in the [roadmap](../../roadmap/README.md).
 
-+ [Print Character with `0Eh`](./project001/README.md)
++ [Print Character](./01_print_character/README.md)
 
 ---
