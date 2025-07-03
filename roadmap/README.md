@@ -68,7 +68,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 **Learn These:**
 
-Assembly instruction:
++ Assembly instruction:
     - [`INT`](../notes/03_assembly_instructions/int.md)
 
 + [Introduction to BIOS interrupts](../notes/05_bios_interrupts/README.md)
