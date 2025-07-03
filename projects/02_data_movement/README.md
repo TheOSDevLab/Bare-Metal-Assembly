@@ -19,4 +19,7 @@ This directory contains beginner-friendly projects that focus on **data movement
 
 These projects are arranged in the order in which they appear in the roadmap [roadmap](../../roadmap/README.md).
 
-
++ [Swap and Show](./01_swap_and_show/README.md)
++ [Address Inspector](./02_address_inspector/README.md)
++ [Register Shuffling Puzzle](./03_register_shuffling_puzzle/README.md)
++ [Indexed Memory Access](./04_indexed_memory_access/README.md)
