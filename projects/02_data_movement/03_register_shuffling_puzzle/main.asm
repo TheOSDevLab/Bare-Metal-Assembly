@@ -12,7 +12,7 @@ start:
     mov cl, 'c'     ; CL = 'c'
     mov dl, 'd'     ; DL = 'd'
 
-first_print:    ; Print the initial values of the registers.
+first_print:    ; Print the initial registers' values.
     ; BL
     mov ah, 0x0E    ; BIOS Function: Teletype output.
     mov al, bl      ; Print the value in BL.
@@ -32,6 +32,8 @@ shuffle:   ; Shuffle the values of the registers.
     xchg dl, bl     ; DL -> BL. DL = 'c', BL = 'd'.
 
 second_print:   ; Print the shuffled values.
+    mov bh, 0   ; Reintialize page number.
+
     ; Print a space.
     mov al, ' '
     int 0x10
@@ -49,7 +51,8 @@ second_print:   ; Print the shuffled values.
     int 0x10
 
 halt:
-    hlt
+    hlt     ; Halt.
+    jmp $   ; Infinite loop fallback.
 
 times 510 - ($ - $$) db 0
 dw 0xAA55
