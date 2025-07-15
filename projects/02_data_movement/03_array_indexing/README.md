@@ -55,7 +55,7 @@ The script uses `NASM` to assemble `main.asm` into a bootable flat binary (`main
 
 When you run the program, you'll get this output:
 
-[Program's Output](../../../resources/images/array_indexing_output.md)
+[Program's Output](../../../resources/images/array_indexing_output.png)
 
 ### What This Means
 
