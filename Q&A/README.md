@@ -8,4 +8,4 @@ This directory collects all the small but important questions that come up while
 
 ## Links
 
-+ [Why are variables in assembly programs typically defined toward the end of the source file, near the boot signature?](00_why_variables_are_at_the_bottom.md)
++ [Why are variables in assembly programs typically defined toward the end of the source file, near the boot signature?](01_why_variables_are_at_the_bottom.md)
