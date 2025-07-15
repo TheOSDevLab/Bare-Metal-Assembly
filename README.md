@@ -18,6 +18,7 @@ This repository has notes, explanations, and examples to help you learn Assembly
 ## Repository Tour
 
 - [**`notes/`**](./notes): Detailed notes on Assembly for OS development, organized and updated regularly.
+- [**`Q&A/`**](./Q&A): A growing collection of extra questions and answers that fill gaps not covered in the main notes.
 - [**`projects/`**](./projects): Fully documented projects to help you practice what you've learned.
 - [**`resources/`**](./resources): A selection of external materials (including PDFs, images and links) that complement the main content.
 - [**`roadmap/`**](./roadmap): A learning plan to show you where to start and what to learn next.
