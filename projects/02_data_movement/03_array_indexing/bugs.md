@@ -1,6 +1,6 @@
 # Bugs
 
-> **Random Quote:** Discipline is doing what needs to bd done, even if you don't want to do it.
+> **Random Quote:** Discipline is doing what needs to be done, even if you don't want to do it.
 
 ---
 
