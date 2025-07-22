@@ -97,6 +97,9 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 **Projects:**
 
++ [Swap and Show](../projects/02_data_movement/01_swap_and_show/README.md)
++ [Register Shuffling Puzzle](../projects/02_data_movement/02_register_shuffling_puzzle/README.md)
++ [Array Indexing](../projects/02_data_movement/03_array_indexing/README.md)
 
 ---
 
