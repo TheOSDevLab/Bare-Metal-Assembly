@@ -47,4 +47,4 @@ mov al, [si]    ; This will work.
 
 ### Reference
 
-For more details on valid addressing modes, see [this file](#).
+For more details on valid addressing modes, see [this file](../../../Q&A/02_which_registers_are_valid_for_memory_addressing.md).
