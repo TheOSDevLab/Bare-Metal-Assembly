@@ -9,7 +9,8 @@
     - [Examples](#examples)
 + [Behavior](#behavior)
     - [Flags Affected](#flags-affected)
-+ [Real-Mode Use Cases](#realmode-use-cases)
++ [Real-Mode Use Cases](#real-mode-use-cases)
++ [Common Pitfalls](#common-pitfalls)
 
 ---
 
@@ -18,6 +19,7 @@
 The `ADD` instruction performs integer addition of the source operand to the destination operand, with the result **replacing the destination**.
 
 `ADD` has a variable size, generally ranging from **1 to 4 bytes**, depending on the operand types.
+
 ---
 
 ## Syntax
@@ -82,5 +84,15 @@ These flags are crucial for conditional branching and multi-word arithmetic.
 + Update loop counters in BIOS or bootloader code.
 + Adjust the stack pointer after function calls or when preserving or releasing local storage.
 + Increment disk sector offsets or memory pointers.
+
+---
+
+## Common Pitfalls
+
++ Attempting to use two memory operands in a single `ADD` instruction.
++ Forgetting that the result overwrites the destination operand. If the original value is needed later, store it elsewhere first.
++ Misinterpreting the effect on flags. Remember that `ADD` modifies several status flags, which can unintentionally affect subsequent conditional jumps.
++ Using immediate values without considering sign extensions. Ensure the immediate constant fits the intended operand size toa void unexpected results.
++ Applying `ADD` in protected mode without valid memory access. Invalid segment selectors or page faults can cause exceptions.
 
 ---
