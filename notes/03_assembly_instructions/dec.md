@@ -100,6 +100,6 @@ dec [count]   ; BYTE or WORD at 'count' is decremented by 1
 ## Notes and References
 
 + [**Intel/AMD Manual**: `DEC r/m8` and `DEC r/m16,r/m32` descriptions](https://www.felixcloutier.com/x86/dec)
-+ Related files: [`INC.md`](./inc.md), [`SUB`](./sub.md)
++ Related files: [`INC`](./inc.md), [`SUB`](./sub.md)
 
 ---
