@@ -103,23 +103,11 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ---
 
-## Arithmetic
+## Loops
 
-**Learn These:**
-
-+ Assembly Instructions:
-    - [`ADD`](../notes/03_assembly_instructions/add.md)
-    - [`SUB`](../notes/03_assembly_instructions/sub.md)
-    - [`INC`](../notes/03_assembly_instructions/inc.md)
-    - [`DEC`](../notes/03_assembly_instructions/dec.md)
-
-**Note:** The `MUL`, `IMUL`, `DIV`, and `IDIV` instructions do exist, but they have been omitted here, as they are seldom required in typical bootloader development.
-
----
-
-## Bitwise Operations
-
-+ `AND`, `OR`, `XOR`, `NOT`, `SHL`, `SHR`
++ `JMP`, `LOOP`
++ `REP`, `REPE`, `REPNE`
++ Assembler directive: `%define`
 
 ---
 
@@ -130,11 +118,23 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ---
 
-## Loops
+## Arithmetic
 
-+ `JMP`, `LOOP`
-+ `REP`, `REPE`, `REPNE`
-+ Assembler directive: `%define`, `times`
+**Learn These:**
+
++ Assembly Instructions:
+    - [`ADD`](../notes/03_assembly_instructions/add.md)
+    - [`SUB`](../notes/03_assembly_instructions/sub.md)
+    - [`INC`](../notes/03_assembly_instructions/inc.md)
+    - [`DEC`](../notes/03_assembly_instructions/dec.md)
+
+**Note:** The `MUL`, `IMUL`, `DIV`, and `IDIV` instructions do exist, but they have been omitted here, as they are seldom required in typical bootloader development. You can still learn them on your own if you feel the need. 
+
+---
+
+## Bitwise Operations
+
++ `AND`, `OR`, `XOR`, `NOT`, `SHL`, `SHR`
 
 ---
 
