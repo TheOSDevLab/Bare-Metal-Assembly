@@ -105,4 +105,6 @@ inc [count]   ; Increment the byte or word at label 'count'
 + [tutorialspoint.com](https://www.tutorialspoint.com/assembly_programming/assembly_arithmetic_instructions.htm)
 + [cs.virginia.edu](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
 
++ Related instructions: [`DEC`](./dec.md)
+
 ---
