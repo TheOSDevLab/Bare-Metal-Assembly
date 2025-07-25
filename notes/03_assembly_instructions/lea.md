@@ -49,7 +49,7 @@ lea ax, [0x1234]    ; Valid because it's a memory address expression.
 ```asm
 myvar dw 0x1234
 
-lea si, [myvar]     ; SI contains the offset (address) of `myvar`,not the value stored at that address (0x1234).
+lea si, [myvar]     ; SI contains the offset (address) of `myvar`, not the value stored at that address (0x1234).
 ```
 
 #### Pointer Arithmetic
