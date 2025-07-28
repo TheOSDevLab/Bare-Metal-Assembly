@@ -4,78 +4,103 @@
 
 ## Key Topics
 
-+ [Overview](#overview)
-    - [Syntax](#syntax)
-+ [Examples](#examples)
+- [Overview](#overview)
+    - [How It Works](#how-it-works)
+- [Syntax](#syntax)
+    - [Instruction Size](#instruction-size)
+- [Examples](#examples)
+- [Practical Use Cases](#practical-use-cases)
+- [Best Practices](#best-practices)
+- [Common Pitfalls](#common-pitfalls)
+- [Notes and Reference](#notes-and-reference)
 
 ---
 
 ## Overview
 
-The `HLT` instruction is a single-byte x86 instruction that causes the CPU to stop executing instructions until it receives a hardware interrupt.
+The `HLT` instruction halts the processor until the next hardware interrupt is received. It is primarily used in low-level programming to suspend CPU activity safely and efficiently.
 
-**How it works**:
+### How It Works
 
-+ When `HLT` is executed, the processor suspends instruction execution.
-+ The CPU remains in this halted state until a hardware interrupt occurs (e.g., from the timer, keyboard, or another I/O device).
-+ Upon receiving an interrupt, the processor resumes normal execution by invoking the corresponding interrupt handler.
++ When executed, `HLT` immediately stops instruction execution.
++ The CPU enters a low-power idle state.
++ Execution resumes only when a **hardware interrupt** occurs.
++ The instruction does **not** affect any CPU flags or registers.
++ If interrupts are disabled (`CLI`), the CPU may hang indefinitely because it cannot wake.
 
-**Note:** The CPU must have interrupts enabled for `HLT` to resume on interrupt. If interrupts are disabled and `HLT` is executed, the system may lock up or hang indefinitely.
+---
 
-**When to use `HLT`**:
-
-+ **In idle loops**. This reduces CPU usage while waiting for input or events.
-+ **Bootloader termination**. Ends execution after loading or displaying something.
-+ **Error states**. Cleanly stops the system if it cannot continue after a critical error.
-+ **Bare-metal Testing**. Prevents the CPU from running garbage if control falls through unintended code.
-
-**Instruction size**:
-
-+ `HLT` is only **1 byte** in size. Its machine code is `0xF4` in hex.
-+ This makes `HLT` very space-efficient, especially in size-constrained environments like boot sectors.
-
-### Syntax
+## Syntax
 
 ```asm
 hlt
 ```
 
-+ No operands.
-+ No prefixes.
-+ Not affected by or affecting the CPU flags.
+* Takes no operands.
+* No prefixes or modifiers.
+* Cannot be used with any addressing modes or registers.
+
+### Instruction Size
+
+* `1 byte` (`0xF4`).
+* One of the smallest instructions in the x86 ISA.
+* No encoding variations or special prefixes.
 
 ---
 
 ## Examples
 
-### Bootloader Termination
-
 ```asm
+; Hang system after execution
 hang:
-    cli         ; Clear interrupts.
-    hlt         ; Halt CPU (won't wake unless NMIs).
-```
+    cli     ; Disable interrupts
+    hlt     ; CPU halts permanently unless NMI occurs
 
-This can serve as the end of a simple test bootloader. It halts the CPU, keeping the processor in an idle state.
-
-### Idle Routine in a Kernel
-
-```asm
+; Idle routine in a simple kernel
 idle:
-    sti         ; Enable interrupts.
-    hlt         ; Halt until next interrupt.
-    jmp idle    ; Return to idle loop.
+    sti     ; Enable interrupts
+    hlt     ; Wait for interrupt
+    jmp idle
+
+; Error handler halt
+fatal_error:
+    cli
+    hlt
+    jmp $   ; Infinite loop fallback
 ```
 
-This code continuously halts the processor until an interrupt wakes it, then returns to the halt loop.
+---
 
-### Safe Stop After Error
+## Practical Use Cases
 
-```asm
-error_halt:
-    cli     ; Disable interrupts.
-    hlt     ; Halt the CPU.
-    jmp $   ; Infinite loop (fallback).
-```
+* **Idle loops in kernels** where the CPU waits for an interrupt.
+* **Graceful halt** at the end of a bootloader or BIOS routine.
+* **Power management** in early OS code before advanced ACPI support exists.
+* **Preventing fallthrough bugs** by halting execution explicitly.
+
+---
+
+## Best Practices
+
+* Always pair `HLT` with `STI` if you intend the CPU to wake on interrupts.
+* Use `CLI` + `HLT` to completely freeze the CPU when no further execution is needed.
+* Use in combination with `JMP $` as a fallback to ensure no unintended code execution occurs.
+
+---
+
+## Common Pitfalls
+
+* Using `HLT` with interrupts disabled: the system hangs and cannot recover unless an NMI is triggered.
+* Assuming it acts like `NOP`: it does **not** proceed to the next instruction.
+* Relying on it in multitasking systems without proper interrupt handling may cause deadlocks or unresponsiveness.
+* Using `HLT` in user-mode (in protected mode): generates a general protection fault unless CPL = 0.
+
+---
+
+## Notes and Reference
+
+* `HLT` is often the final instruction in a boot sector that prints a message or loads a stage-2 loader.
+* Opcode: `0xF4`
+* Reference: [Intel® Software Developer’s Manual, Vol. 2: Instruction Set Reference - HLT](https://www.felixcloutier.com/x86/hlt)
 
 ---
