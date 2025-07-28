@@ -93,6 +93,6 @@ int 0x03
 
 * `INT` behavior differs significantly between **real mode** (BIOS/IVT) and **protected mode** (IDT and privilege levels).
 * Special case: `INT 3` (`0xCC`) is optimized for debuggers and occupies only one byte.
-* Reference: [Intel® Software Developer’s Manual, Vol. 2: Instruction Set Reference - INT](https://www.felixcloutier.com/x86/int)
+* Reference: [Intel® Software Developer’s Manual, Vol. 2: Instruction Set Reference - INT](https://www.felixcloutier.com/x86/intn:into:int3:int1)
 
 ---
