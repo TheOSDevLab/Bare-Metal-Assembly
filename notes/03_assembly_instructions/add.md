@@ -3,96 +3,106 @@
 > **Random Quote**: Small disciplines repeated with consistency every day lead to great achievements gained slowly over time.
 
 ## Key Topics
-
-+ [Introduction](#introduction)
-+ [Syntax](#syntax)
-    - [Examples](#examples)
-+ [Behavior](#behavior)
-    - [Flags Affected](#flags-affected)
-+ [Real-Mode Use Cases](#real-mode-use-cases)
-+ [Common Pitfalls](#common-pitfalls)
+- [Overview](#overview)
+    - [How It Works](#how-it-works)
+- [Syntax](#syntax)
+    - [Instruction Size](#instruction-size)
+- [Examples](#examples)
+- [Practical Use Cases](#practical-use-cases)
+- [Best Practices](#best-practices)
+- [Common Pitfalls](#common-pitfalls)
 
 ---
 
-## Introduction
+## Overview
 
-The `ADD` instruction performs integer addition of the source operand to the destination operand, with the result **replacing the destination**.
+The `ADD` instruction performs an integer addition of two operands and stores the result in the destination.
 
-`ADD` has a variable size, generally ranging from **1 to 4 bytes**, depending on the operand types.
+### How It Works
+
+When `ADD` is executed:
+
+- The CPU reads the values of the source and destination operands.
+- It adds them and stores the result in the destination operand.
+- It sets or clears CPU flags based on the outcome.
+- The instruction supports signed and unsigned values and can be used with 8-bit, 16-bit, 32-bit, and 64-bit operands.
+- If the source is an immediate value, it is **sign-extended** to match the size of the destination.
+
+**Note**: `ADD` does not preserve the original destination value. Use a copy if needed later.
 
 ---
 
 ## Syntax
 
-```assembly
+```asm
 add destination, source
 ```
 
-+ `destination`: Register or memory location containing an integer.
-+ `source`: Register, memory location, or immediate constant.
++ `destination`: A register or memory location that will hold the result.
++ `source`: A register, memory location, or immediate constant.
++ **Restrictions**: You cannot use two memory operands in a single instruction.
 
-**Note**: You cannot have memory locations for both operands at the same time.
-
-```assembly
-add [mem1], [mem2]  ; Invalid because both operands are memory locations.
+```asm
+add [mem1], [mem2]  ; Invalid!
 ```
 
-### Examples
+### Instruction Size
 
-```assembly
-; Register to register.
++ Typically 1-4 bytes, depending on operand size and addressing mode.
++ Encodings vary: register-to-register is shortest, memory-to-memory is invalid, and memory-to-register incurs additional bytes for addressing.
++ Supports the `LOCK` prefix for atomic operations on shared memory in multiprocessor environments.
+
+---
+
+## Examples
+
+```asm
+; Register to register
 add ax, bx      ; AX = AX + BX
 
-; Immediate to register.
+; Immediate to register
 add eax, 10     ; EAX = EAX + 10
 
-; Memory to register.
+; Memory to register
 add ax, [var]   ; AX = AX + word at var
 
-; Register to memory.
+; Register to memory
 add [var], cl   ; byte at var = byte at var + CL
 ```
 
 ---
 
-## Behavior
+## Practical Use Cases
 
-+ The result is stored in the destination operand.
-+ Handles both signed and unsigned integers.
-+ When an immediate constant is used, it is **sign-extended** to the destination operand size.
-+ In protected mode, `ADD` can raise faults if memory is invalid (e.g. #GP, #SS, #PF).
-+ Supports a `LOCK` prefix for atomic usage in multiprocessing environments.
-
-### Flags Affected
-
-This instruction updates the following flags based on the result:
-
-+ **CF (Carry Flag)**: Set if unsigned overflow occurs.
-+ **OF (Overflow Flag)**: Set if signed overflow occurs.
-+ **ZF (Zero Flag)**: Set if the result is zero.
-+ **SF (Sign Flag)**: Reflects the sign bit of the result.
-+ **AF (Auxiliary Carry Flag)**: Set if a nibble (4-bit) carry occurs.
-+ **PF (Parity Flag)**: Set if the low byte of the result has even parity.
-
-These flags are crucial for conditional branching and multi-word arithmetic.
++ Updating **loop counters** in iteration logic.
++ Adjusting **pointers or offsets** in memory for buffer traversal.
++ Performing **basic arithmetic** in bootloaders or BIOS routines.
++ Managing **stack pointer (SP/BP)** during procedure prologue/epilogue.
++ Incrementing **disk sectors or segment offsets** for I/O operations.
 
 ---
 
-## Real-Mode Use Cases
+## Best Practices
 
-+ Increment pixel counters or row and column indices in early graphics routines.
-+ Update loop counters in BIOS or bootloader code.
-+ Adjust the stack pointer after function calls or when preserving or releasing local storage.
-+ Increment disk sector offsets or memory pointers.
++ **Preserve the destination** if you need its original value after the operation.
++ Use `ADD` to adjust pointers instead of `MOV` + `ADD` if offsets are small and immediate.
++ Pair with `ADC` for multi-word arithmetic (carry-aware addition).
++ Use with care inside critical sections or shared memory regions; prefix with `LOCK` if atomicity is required.
 
 ---
 
 ## Common Pitfalls
 
-+ Attempting to use two memory operands in a single `ADD` instruction.
-+ Forgetting that the result overwrites the destination operand. If the original value is needed later, store it elsewhere first.
-+ Misinterpreting the effect on flags. Remember that `ADD` modifies several status flags, which can unintentionally affect subsequent conditional jumps.
-+ Using immediate values without considering sign extensions. Ensure the immediate constant fits the intended operand size toa void unexpected results.
-+ Applying `ADD` in protected mode without valid memory access. Invalid segment selectors or page faults can cause exceptions.
++ **Invalid memory-memory operand**: Both operands cannot reference memory.
++ **Silent flag changes**: `ADD` modifies multiple flags, which may affect jumps and conditional logic.
++ **Unexpected sign extension**: Immediate values are sign-extended; be mindful of operand sizes.
++ **Overwriting the destination**: The original destination value is lost unless stored first.
++ **Faults in protected mode**: If memory is not mapped or accessible, `ADD` can raise a general protection fault or page fault.
+
+---
+
+## Notes and Reference
+
+* [felixcloutier.com](https://www.felixcloutier.com/x86/add)
 
 ---

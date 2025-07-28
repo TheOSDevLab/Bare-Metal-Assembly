@@ -38,8 +38,7 @@ lea destination, source
 
 + `destination`: Must be a general-purpose register (e.g., `AX`, `BX`, `SI`, `EAX`, `RAX`).
 + `source`: Must be a valid memory expression enclosed in square brackets.
-
-**Note**: You cannot use `LEA` with two memory operands or with an immediate constant directly (e.g., `lea ax, 0x1234` is invalid).
++ **Restrictions**: You cannot use `LEA` with two memory operands or with an immediate constant directly (e.g., `lea ax, 0x1234` is invalid).
 
 Valid memory expressions can include combinations of base registers, index registers, scale factors, and displacements.
 
