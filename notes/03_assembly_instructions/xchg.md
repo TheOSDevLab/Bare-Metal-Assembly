@@ -4,80 +4,110 @@
 
 ## Key Topics
 
-+ [Overview](#overview)
-    - [Syntax](#syntax)
-    - [Examples](#examples)
+- [Overview](#overview)
+    - [How It Works](#how-it-works)
+- [Syntax](#syntax)
+    - [Instruction Size](#instruction-size)
+- [Examples](#examples)
+- [Practical Use Cases](#practical-use-cases)
+- [Best Practices](#best-practices)
+- [Common Pitfalls](#common-pitfalls)
+- [Notes and Reference](#notes-and-reference)
 
 ---
 
 ## Overview
 
-The `XCHG` instruction, short for **exchange**, is used to **swap the values** of two operands. It performs a data exchange without the need for a temporary register or memory location.
+The `XCHG` instruction swaps the values of two operands. It performs an in-place exchange of data between a register and another register or a memory location, without using a temporary register.
 
-This instruction is particularly useful in low-level programming scenarios where register preservation is important, or when implementing efficient in-place algorithms.
+It is a compact and efficient instruction especially useful in low-level routines, register juggling, or implementing swap logic in-place.
 
-**Note:** This instruction does not affect any flags.
+### How It Works
 
-**Use Cases:**
-
-+ Swapping registers during context switches or subroutine entry/exit.
-+ Temporary data preservation without pushing to the stack.
-+ Swapping values in sorting algorithms.
-+ Compact register juggling in bootloaders.
-
-### Syntax
-
-```asm
-xchg operand1, operand2
-```
-
-+ Both operands **must be the same size** (e.g., both 8-bit, 16-bit, or 32-bit).
-+ One operand **must be a register**.
-+ The other operand can be either a **register** or **memory** location.
-+ You **cannot** use two memory operands.
++ The CPU reads the values from both operands.
++ It then exchanges (swaps) their contents.
++ One operand must be a register. The other can be a register or a memory location.
++ The operands must be of equal size (8, 16, 32, or 64-bit).
++ No CPU flags are affected by this operation.
 
 ---
 
-### Examples
-
-#### Register to Register
+## Syntax
 
 ```asm
+xchg destination, source
+````
+
+* `destination`: A register.
+* `source`: A register or a memory location.
+* **Restrictions**:
+
+  * Both operands must be the same size.
+  * You cannot use two memory operands.
+
+```asm
+xchg [mem1], [mem2]  ; Invalid!
+xchg al, bx          ; Invalid size combination!
+```
+
+### Instruction Size
+
+* `xchg ax, reg16`: 1 byte (special encoding).
+* `xchg reg, reg`: 2 bytes.
+* `xchg reg, mem`: 2–3 bytes (depends on addressing mode).
+
+---
+
+## Examples
+
+```asm
+; Register to register
 mov ax, 0x1234
 mov bx, 0x5678
-xchg ax, bx     ; AX = 0x5678, BX = 0x1234
+xchg ax, bx      ; AX = 0x5678, BX = 0x1234
+
+; Register and memory
+myvar dw 0xAAAA
+mov ax, 0x5555
+xchg ax, [myvar] ; AX = 0xAAAA, [myvar] = 0x5555
+
+; Special encoding with AX
+xchg ax, dx      ; 1-byte encoding
 ```
 
-#### Register and Memory
+---
 
-```asm
-myvar dw 0xAAAA         ; Note that the value is 2 bytes.
+## Practical Use Cases
 
-mov ax, 0x5555          ; This is also 2 bytes.
-xchg word [myvar], ax   ; [myvar] = 0x5555, AX = 0xAAAA
-```
+* Swapping variables in sorting algorithms.
+* Efficient register preservation before subroutine calls or I/O routines.
+* Quick value swaps without allocating extra memory or registers.
+* Register juggling in bootloader logic to conserve space and avoid stack usage.
 
-**Quick explanation:** `myvar` is an address in memory. It can be anything (like `0x2344`). The brackets mean, take the value at that memory address, which is `0xAAAA`. The `word` size specifier tells the instruction to take 2 bytes from the memory address. This code example swaps the contents of `AX` with the word stored at label `myvar`.
+---
 
-#### Invalid Example
+## Best Practices
 
-```asm
-xchg [var1], [var2]     ; Invalid because both operands are memory.
-xchg al, bx             ; Invalid because of size mismatch.
-```
+* Use `XCHG` with `AX` when possible to take advantage of shorter encoding in size-constrained environments.
+* Prefer `XCHG` over manual swap logic when only two values need to be exchanged.
+* Be explicit with memory size specifiers (e.g., `byte`, `word`) to avoid ambiguity.
+* Avoid using `XCHG` in critical sections of multiprocessor systems without proper locking (see `LOCK` prefix if needed).
 
-#### Special Case: `XCHG` with `AX`
+---
 
-The instruction `xchg ax, reg16` uses a special, optimized encoding that is **1 byte shorter** than other forms. This makes it useful in space-constrained environments such as bootloaders.
+## Common Pitfalls
 
-```asm
-xchg ax, dx     ; More compact encoding than 'xchg bx, dx'.
-```
+* Using two memory operands: not allowed.
+* Mismatched operand sizes: causes assembler errors.
+* Assuming flags are modified: `XCHG` does not affect any CPU flags.
+* Forgetting that one operand **must** be a register.
 
-**Instruction Size:**
+---
 
-+ `xchg ax, reg16`: 1 byte.
-+ `xchg reg, reg` : 2 bytes.
-+ `xchg reg, mem` : 2-3 bytes.
+## Notes and Reference
+
+* In 16-bit mode, `xchg ax, reg` has a one-byte encoding (opcode `90h` + register code).
+* `XCHG` with `AX` is functionally identical to a `NOP` if the same register is used (e.g., `xchg ax, ax`).
+* Reference: [XCHG - Felix Cloutier](https://www.felixcloutier.com/x86/xchg)
 
 ---
