@@ -4,78 +4,95 @@
 
 ## Key Topics
 
-+ [Overview](#overview)
-    - [Behavior](#behavior)
-    - [Use Cases](#use-cases)
-    - [Cautions and Restrictions](#cautions-and-restrictions)
-    - [Syntax](#syntax)
+- [Overview](#overview)
+    - [How It Works](#how-it-works)
+- [Syntax](#syntax)
     - [Instruction Size](#instruction-size)
-+ [Examples](#examples)
+- [Examples](#examples)
+- [Practical Use Cases](#practical-use-cases)
+- [Best Practices](#best-practices)
+- [Common Pitfalls](#common-pitfalls)
+- [Notes and Reference](#notes-and-reference)
 
 ---
 
 ## Overview
 
-The `INT` instruction, short for **interrupt**, is used to perform a software interrupt, a controlled transfer of execution to a predefined address specified in the **Interrupt Vector Table (IVT)**.
+The `INT` instruction triggers a **software interrupt**, transferring control to an interrupt handler defined in the **Interrupt Vector Table (IVT)**. It provides a mechanism to invoke system-level functionality from user code, especially useful in real-mode environments like BIOS calls.
 
-### Behavior
+### How It Works
 
-1. When the `INT` instruction is executed, the CPU pushes the current `FLAGS`, `CS`, and `IP` registers onto the stack.
-2. It **clears the interrupt flag (IF)** and **trap flag (TF)** to prevent other interrupts during handler execution.
-3. It loads `CS` and `IP` from the corresponding entry in the **Interrupt Vector Table**, based on the interrupt number.
-4. Execution jumps to the address of the interrupt handler.
-5. When the handler completes, it typically ends with an `IRET` instruction, which restores the saved state and returns control to the original caller.
++ The CPU pushes `FLAGS`, `CS`, and `IP` onto the stack to save the current execution state.
++ It disables further maskable interrupts by clearing the **IF** (Interrupt Flag) and **TF** (Trap Flag).
++ It fetches the interrupt handler's address from the IVT using the given interrupt number.
++ Control is transferred to the handler at the fetched address.
++ The handler typically ends with `IRET`, restoring the previous state and resuming execution.
 
-### Use Cases
+---
 
-+ **BIOS services:** Used to access video, disk, keyboard, and other low-level hardware services.
-+ **System calls:** Used in software-triggered system calls in OS design.
-+ **Exception handling:** Exceptions like division by zero, invalid opcode, and others use `INT` internally.
-+ **Debugging:** `INT 3` is used as a breakpoint in debuggers.
-
-### Cautions and Restrictions
-
-+ The interrupt handler must end with `IRET`, not `RET`, to properly restore `FLAGS` and resume execution.
-+ If you execute `INT` with an undefined or uninitialized interrupt vector, the behavior is undefined and may crash the system.
-+ Be cautious when using `INT` in protected mode; its behavior defers and is typically managed through the **IDT (Interrupt Descriptor Table)** and system gates.
-+ `INT` is not a high-performance mechanism. It introduces overhead and should be used judiciously in performance-critical code.
-
-### Syntax
+## Syntax
 
 ```asm
 int interrupt_number
-```
+````
 
-+ `interrupt_number`: A one-byte value (0-255) that identifies the interrupt vector to invoke. It is usually written in hexadecimal (e.g., `int 0x10`).
-
-**Note:** The instruction takes a single immediate operand, not a register or memory value.
+* `interrupt_number`: An immediate value (0-255) specifying the index into the IVT.
+* Only immediate values are allowed; you cannot use a register or memory as the operand.
 
 ### Instruction Size
 
-| Operand Type      | Machine Code Example | Size    |
-| ----------------- | -------------------- | ------- |
-| `INT n`           | `CD nn`              | 2 bytes |
-| `INT 3` (special) | `CC`                 | 1 byte  |
-
-+ `INT3` has its own opcode (`0xCC`) for efficient insertion by debuggers.
+* `INT n` => `CD nn`: 2 bytes
+* `INT 3` => `CC` (special one-byte encoding for breakpoints)
 
 ---
 
 ## Examples
 
-### BIOS Teletype Output
-
 ```asm
-mov ah, 0x0E    ; Function: Teletype output.
-mov al, 'A'     ; Character to print.
-mov bh, 0       ; Page number.
-int 0x10        ; Call BIOS.
+; Teletype output using BIOS
+mov ah, 0x0E
+mov al, 'A'
+mov bh, 0
+int 0x10
+
+; Software breakpoint
+int 0x03
 ```
 
-This prints the character `'A'` to the screen using BIOS video services.
+---
 
-### Trigger Software Exception (for debugging)
+## Practical Use Cases
 
-```asm
-int 0x03    ; Trigger a breakpoint (used by debuggers).
-```
+* **BIOS service calls** in real mode (e.g., printing text, reading sectors, checking hardware).
+* **Debugging**: inserting `INT 3` to create software breakpoints.
+* **Exception simulation** for testing interrupt handlers or system fault responses.
+* **System calls** in simple operating systems via `INT` instructions.
+
+---
+
+## Best Practices
+
+* Use only **immediate operands** and verify that the interrupt number is correctly mapped in the IVT.
+* Always ensure that the interrupt handler ends with `IRET`, not `RET`.
+* Document which registers the handler modifies or preserves, especially in custom OS development.
+* Use `INT` judiciously in performance-critical paths due to its relatively high overhead.
+
+---
+
+## Common Pitfalls
+
+* **Using RET instead of IRET** in handlers, leading to stack corruption.
+* **Calling undefined or uninitialized vectors**, resulting in crashes or erratic behavior.
+* Misunderstanding **INT vs hardware interrupts** (e.g., `INT` is software-driven; hardware IRQs are external events).
+* Relying on `INT` in protected mode without proper IDT setup, which causes general protection faults.
+* Forgetting that `INT` disables further interrupts until re-enabled manually or by IRET.
+
+---
+
+## Notes and Reference
+
+* `INT` behavior differs significantly between **real mode** (BIOS/IVT) and **protected mode** (IDT and privilege levels).
+* Special case: `INT 3` (`0xCC`) is optimized for debuggers and occupies only one byte.
+* Reference: [Intel® Software Developer’s Manual, Vol. 2: Instruction Set Reference - INT](https://www.felixcloutier.com/x86/int)
+
+---
