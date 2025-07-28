@@ -8,5 +8,8 @@ This directory collects all the small but important questions that come up while
 
 ## Links
 
-+ [Why are variables in assembly programs typically defined toward the end of the source file, near the boot signature?](01_why_variables_are_at_the_bottom.md)
-+ [Which registers can be used as base or index registers in 16-bit addressing modes?](02_which_registers_are_valid_for_memory_addressing.md)
+1. [Why are variables in assembly programs typically defined toward the end of the source file, near the boot signature?](01_why_variables_are_at_the_bottom.md)
+2. [Which registers can be used as base or index registers in 16-bit addressing modes?](02_which_registers_are_valid_for_memory_addressing.md)
+3. [How do I convert a single digit integer into a string for printing?](03_convert_integer_to_string.md)
+
+---
