@@ -116,7 +116,14 @@ This is covered in [this file](../notes/02_boilerplate.md).
 + `JC`, `JZ`, `JE`, `JNE`, `JMP`, `JG`, `JL`, etc.
 + `CMP`, `TEST`
 
----
+----
+
+## Stack Operations
+
++ `PUSH`, `POP`, `PUSHA`, `POPA`
++ `CALL`, `RET`
+
+--
 
 ## Arithmetic
 
@@ -129,7 +136,11 @@ This is covered in [this file](../notes/02_boilerplate.md).
     - [`DEC`](../notes/03_assembly_instructions/dec.md)
     - [`DIV`](../notes/03_assembly_instructions/div.md)
 
-**Note:** The `MUL`, `IMUL`, and `IDIV` instructions do exist, but they have been omitted here, as they are seldom required in typical bootloader development. You can still learn them on your own if you feel the need. 
+**Note:** The `MUL`, `IMUL`, and `IDIV` instructions do exist, but they have been omitted here, as they are seldom required in typical bootloader development. You can still learn them on your own if you feel the need.
+
+**Projects**:
+
++ [Add Two Numbers](../projects/06_arithmetic/01_add_two_numbers/README.md)
 
 ---
 
@@ -142,13 +153,6 @@ This is covered in [this file](../notes/02_boilerplate.md).
 ## String and Memory Instructions
 
 + `MOVSB`, `STOSB`, `LODSB`, `SCASB`, and their variants.
-
----
-
-## Stack Operations
-
-+ `PUSH`, `POP`, `PUSHA`, `POPA`
-+ `CALL`, `RET`
 
 ---
 
