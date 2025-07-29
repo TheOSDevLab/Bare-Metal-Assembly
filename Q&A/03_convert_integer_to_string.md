@@ -148,6 +148,57 @@ times 510 - ($ - $$) db 0
 dw 0xAA55
 ```
 
+### This Example Uses Recursion
+
+```assembly
+org 0x7C00
+bits 16
+
+start:
+    ; Set video mode and clear screen.
+    mov ah, 0x00        ; BIOS function: Set video mode.
+    mov al, 0x03        ; Mode: 80x25 color text mode.
+    int 0x10            ; Call BIOS.
+
+    mov ax, 1234        ; Number to print.
+    call print_decimal  ; Converts AX to string and prints
+
+hang:
+    jmp $
+
+; print_decimal: displays AX via BIOS INT 10h
+print_decimal:
+    push ax
+    push dx
+
+    mov bx, 10
+    xor dx, dx
+    div bx              ; AX=quotient, DX=remainder
+
+    cmp ax, 0
+    je .print_units
+
+    ; Recursively print higher digits
+    push ax
+    call print_decimal
+    pop ax
+
+.print_units:
+    add dl, '0'
+    mov ah, 0x0E
+    mov al, dl
+    mov bh, 0
+    int 0x10
+
+    pop dx
+    pop ax
+    ret
+
+times 510-($-$$) db 0
+dw 0xAA55
+
+```
+
 ### Advantages
 
 + No need to manage a separate buffer.
