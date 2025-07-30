@@ -141,6 +141,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
 **Projects**:
 
 + [Add Two Numbers](../projects/06_arithmetic/01_add_two_numbers/README.md)
++ [Difference Finder](../projects/06_arithmetic/02_difference_finder/README.md)
 
 ---
 
