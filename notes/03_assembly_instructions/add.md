@@ -103,6 +103,6 @@ add [var], cl   ; byte at var = byte at var + CL
 
 ## Notes and Reference
 
-* [felixcloutier.com](https://www.felixcloutier.com/x86/add)
++ [felixcloutier.com](https://www.felixcloutier.com/x86/add)
 
 ---
