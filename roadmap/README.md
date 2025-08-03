@@ -105,8 +105,15 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ## Loops
 
-+ `JMP`, `LOOP`
+### Learn These
+
++ **Assembly Instructions**:
+    + [`LOOP`](../notes/03_assembly_instructions/loop.md)
+
+
++ `LOOPE`, `LOOPZ`, `LOOPNE`, `LOOPNZ`.
 + `REP`, `REPE`, `REPNE`
++ `JMP`
 + Assembler directive: `%define`
 
 ---
