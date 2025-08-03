@@ -98,7 +98,7 @@ addr32:
 ## Notes and References
 
 + Additional insight: `loop` is effectively `dec cx` / `jnz label` wrapped into one instruction.
-+ See [this file](../../Q&A/how_to_override_address.md) to learn how to override the address size; for example, how to force the use of `CX` in 32-bit mode or `ECX` in 64-bit mode.
++ See [this file](../../Q&A/04_how_to_override_address_size.md) to learn how to override the address size; for example, how to force the use of `CX` in 32-bit mode or `ECX` in 64-bit mode.
 + [felixcloutier.com](https://www.felixcloutier.com/x86/loop:loopcc)
 
 ---
