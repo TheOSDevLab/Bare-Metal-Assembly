@@ -104,5 +104,5 @@ compare_loop:
 
 ## Notes and References
 
-* Intel's ASM86 manual defines LOOPE (LOOPZ) behavior for 8086/8088. ([community.intel.com download link][https://community.intel.com/cipcp26785/attachments/cipcp26785/c-compiler/31103/1/121703-003_ASM86_Language_Reference_Manual_Nov83.pdf])
+* Intel's ASM86 manual defines LOOPE (LOOPZ) behavior for 8086/8088. [community.intel.com download link](https://community.intel.com/cipcp26785/attachments/cipcp26785/c-compiler/31103/1/121703-003_ASM86_Language_Reference_Manual_Nov83.pdf)
 
