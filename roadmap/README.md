@@ -109,9 +109,9 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 + **Assembly Instructions**:
     + [`LOOP`](../notes/03_assembly_instructions/loop.md)
+    + [`LOOPE` / `LOOPZ`](../notes/03_assembly_instructions/loope_or_loopz.md)
+    + [`LOOPNE` / `LOOPNZ`](../notes/03_assembly_instructions/loopne_or_loopnz.md)
 
-
-+ `LOOPE`, `LOOPZ`, `LOOPNE`, `LOOPNZ`.
 + `REP`, `REPE`, `REPNE`
 + `JMP`
 + Assembler directive: `%define`
