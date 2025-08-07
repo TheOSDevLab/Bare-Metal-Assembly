@@ -14,7 +14,7 @@ Each topic is accompanied by a dedicated project to reinforce practical understa
 
 This is covered [here](../notes/00_setup_dev_env.md).
 
-**What will be covered:**
+### What Will be Covered
 
 + Determining the best platform.
 + Installing an assembler.
@@ -27,7 +27,7 @@ This is covered [here](../notes/00_setup_dev_env.md).
 
 This is covered in these files: [Intel](../notes/01_syntax/00_intel.md), [AT&T](../notes/01_syntax/01_AT&T.md).
 
-**What will be covered:**
+### What Will be Covered
 
 + Instruction format and operand order.
 + Comment style.
@@ -44,18 +44,18 @@ This is covered in these files: [Intel](../notes/01_syntax/00_intel.md), [AT&T](
 
 This is covered in [this file](../notes/02_boilerplate.md).
 
-**What will be covered:**
+### What Will be Covered
 
 + Boot signature.
 + Why `ORG 0x7C00` and `BITS 16`?
 + 512 bytes restriction.
 
-**Learn these first:**
+### Learn These
 
-+ Assembly instruction:
++ **Assembly instruction**:
     - [`HLT`](../notes/03_assembly_instructions/hlt.md)
 
-+ Assembler directives:
++ **Assembler directives**:
     - [Introduction](../notes/04_assembler_directives/README.md)
     - [`ORG`](../notes/04_assembler_directives/org.md)
     - [`BITS`](../notes/04_assembler_directives/bits.md)
@@ -66,9 +66,9 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ## BIOS Interrupts Introduction
 
-**Learn These:**
+### Learn These
 
-+ Assembly instruction:
++ **Assembly instruction**:
     - [`INT`](../notes/03_assembly_instructions/int.md)
 
 + [Introduction to BIOS interrupts](../notes/05_bios_interrupts/README.md)
@@ -76,7 +76,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
 + [BIOS INT 10h 00h](../notes/05_bios_interrupts/int10h/00h.md)
 + [BIOS INT 10h 0Eh](../notes/05_bios_interrupts/int10h/0Eh.md)
 
-**Project:**
+### Project
 
 + [Print Character](../projects/01_bios_interrupts/01_print_character/README.md)
 
@@ -84,18 +84,18 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ## Data Movement
 
-**Learn These:**
+### Learn These
 
-+ Assembly instructions:
++ **Assembly instructions**:
     - [Introduction](../notes/03_assembly_instructions/README.md)
     - [`MOV`](../notes/03_assembly_instructions/mov.md)
     - [`XCHG`](../notes/03_assembly_instructions/xchg.md)
     - [`LEA`](../notes/03_assembly_instructions/lea.md)
 
-+ Assembler directives:
++ **Assembler directives**:
     - [`EQU`](../notes/04_assembler_directives/equ.md)
 
-**Projects:**
+### Projects
 
 + [Swap and Show](../projects/02_data_movement/01_swap_and_show/README.md)
 + [Register Shuffling Puzzle](../projects/02_data_movement/02_register_shuffling_puzzle/README.md)
@@ -111,9 +111,6 @@ This is covered in [this file](../notes/02_boilerplate.md).
     + [`LOOP`](../notes/03_assembly_instructions/loop.md)
     + [`LOOPE` / `LOOPZ`](../notes/03_assembly_instructions/loope_or_loopz.md)
     + [`LOOPNE` / `LOOPNZ`](../notes/03_assembly_instructions/loopne_or_loopnz.md)
-    + [`REP`](../notes/03_assembly_instructions/rep.md)
-    + [`REPE` / `REPZ`](../notes/03_assembly_instructions/repe_or_repz.md)
-    + [`REPNE` / `REPNZ`](../notes/03_assembly_instructions/repne_or_repnz.md)
 
 + `JMP`
 + Assembler directive: `%define`
@@ -136,9 +133,9 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ## Arithmetic
 
-**Learn These:**
+### Learn These
 
-+ Assembly Instructions:
++ **Assembly Instructions**:
     - [`ADD`](../notes/03_assembly_instructions/add.md)
     - [`SUB`](../notes/03_assembly_instructions/sub.md)
     - [`INC`](../notes/03_assembly_instructions/inc.md)
@@ -147,7 +144,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 **Note:** The `MUL`, `IMUL`, and `IDIV` instructions do exist, but they have been omitted here, as they are seldom required in typical bootloader development. You can still learn them on your own if you feel the need.
 
-**Projects**:
+### Projects
 
 + [Add Two Numbers](../projects/06_arithmetic/01_add_two_numbers/README.md)
 + [Difference Finder](../projects/06_arithmetic/02_difference_finder/README.md)
@@ -163,6 +160,12 @@ This is covered in [this file](../notes/02_boilerplate.md).
 ---
 
 ## String and Memory Instructions
+
++ **Assembly Instructions**:
+    + [`REP`](../notes/03_assembly_instructions/rep.md)
+    + [`REPE` / `REPZ`](../notes/03_assembly_instructions/repe_or_repz.md)
+    + [`REPNE` / `REPNZ`](../notes/03_assembly_instructions/repne_or_repnz.md)
+
 
 + `MOVSB`, `STOSB`, `LODSB`, `SCASB`, and their variants.
 
