@@ -111,8 +111,10 @@ This is covered in [this file](../notes/02_boilerplate.md).
     + [`LOOP`](../notes/03_assembly_instructions/loop.md)
     + [`LOOPE` / `LOOPZ`](../notes/03_assembly_instructions/loope_or_loopz.md)
     + [`LOOPNE` / `LOOPNZ`](../notes/03_assembly_instructions/loopne_or_loopnz.md)
+    + [`REP`](../notes/03_assembly_instructions/rep.md)
+    + [`REPE` / `REPZ`](../notes/03_assembly_instructions/repe_or_repz.md)
+    + [`REPNE` / `REPNZ`](../notes/03_assembly_instructions/repne_or_repnz.md)
 
-+ `REP`, `REPE`, `REPNE`
 + `JMP`
 + Assembler directive: `%define`
 
