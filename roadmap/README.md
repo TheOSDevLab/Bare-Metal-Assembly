@@ -111,8 +111,8 @@ This is covered in [this file](../notes/02_boilerplate.md).
     + [`LOOP`](../notes/03_assembly_instructions/loop.md)
     + [`LOOPE` / `LOOPZ`](../notes/03_assembly_instructions/loope_or_loopz.md)
     + [`LOOPNE` / `LOOPNZ`](../notes/03_assembly_instructions/loopne_or_loopnz.md)
+    + [`JMP`](../notes/03_assembly_instructions/jmp.md)
 
-+ `JMP`
 + Assembler directive: `%define`
 
 ---
