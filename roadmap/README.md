@@ -113,7 +113,11 @@ This is covered in [this file](../notes/02_boilerplate.md).
     + [`LOOPNE` / `LOOPNZ`](../notes/03_assembly_instructions/loopne_or_loopnz.md)
     + [`JMP`](../notes/03_assembly_instructions/jmp.md)
 
-+ Assembler directive: `%define`
++ **Assembler directive**:
+    + [`%define`](../notes/04_assembler_directives/%define.md)
+
+### Projects
+
 
 ---
 
