@@ -93,6 +93,6 @@ mov byte [param(2,ebx)], ctrl 'D'
 * `%define` is the default single-line macro directive in NASM's preprocessor.
 * It contrasts with `%assign`, which evaluates immediately at definition time.
 * `-dFOO=100` command-line option is an alternative to placing `%define FOO 100` in code.
-* Refer to [this document](../../Q&A/05_equ_vs_%define.md) for a detailed explanation of the difference between `EQU` and `%define`.
+* Refer to [this document](../../Q&A/05_equ_vs_\%define.md) for a detailed explanation of the difference between `EQU` and `%define`.
 
 ---
