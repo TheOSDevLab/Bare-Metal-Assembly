@@ -7,7 +7,7 @@
 + [Overview](#overview)
     - [Syntax](#syntax)
     - [Examples](#examples)
-
++ [Notes and References](#notes_and_references)
 ---
 
 ## Overview
@@ -81,3 +81,7 @@ value equ [somevar] ; Invalid because you cannot equate to a memory reference.
 ```
 
 ---
+
+## Notes and References
+
++ Refer to [this document](../../Q&A/equ_vs_%define.md) for a detailed explanation of the difference between `EQU` and `%define`.
