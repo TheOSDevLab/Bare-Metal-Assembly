@@ -84,4 +84,4 @@ value equ [somevar] ; Invalid because you cannot equate to a memory reference.
 
 ## Notes and References
 
-+ Refer to [this document](../../Q&A/05_equ_vs_%define.md) for a detailed explanation of the difference between `EQU` and `%define`.
++ Refer to [this document](../../Q&A/05_equ_vs_%25define.md) for a detailed explanation of the difference between `EQU` and `%define`.
