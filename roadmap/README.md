@@ -123,8 +123,32 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ## Conditionals
 
-+ `JC`, `JZ`, `JE`, `JNE`, `JMP`, `JG`, `JL`, etc.
+### Learn These
+
+#### Assembly Instructions
+
++ `JE` / `JZ`
++ `JNE` / `JNZ`
++ `JBE` / `JNA`
++ `JA` / `JNBE`
++ `JLE` / `JNG`
++ `JC` / `JB` / `JNAE`
++ `JNC` / `JAE` / `JNB`
++ `JG` / `JNLE`
 + `CMP`, `TEST`
+
+> Im procrastinating these:
+> + `JGE` / `JNL`
+> + `JL` / `JNGE`
+> + `JO`
+> + `JNO`
+> + `JS`
+> + `JNS`
+> + `JP` / `JPE`
+> + `JNP` / `JPO`
+> + `JCXZ`
+> + `JECXZ`
+
 
 ----
 
