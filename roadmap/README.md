@@ -137,7 +137,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
 + `JG` / `JNLE`
 + `CMP`, `TEST`
 
-> Im procrastinating these:
+> I intend to address these instructions at a later stage in my study plan:
 > + `JGE` / `JNL`
 > + `JL` / `JNGE`
 > + `JO`
