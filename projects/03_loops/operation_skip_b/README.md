@@ -61,7 +61,7 @@ The script uses `NASM` to assemble `main.asm` into a bootable flat binary (`main
 
 Here's the output I got:
 
-![Program's Output](../../../resources/images/project_skip_b_output.png)
+![Program's Output](../../../resources/images/operation_skip_b_output.png)
 
 The missing "B" shows that `JMP` successfully skipped over the code that would have printed it.
 
