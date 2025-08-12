@@ -118,6 +118,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ### Projects
 
++ [Operation Skip B](../projects/03_loops/01_operation_skip_b/README.md)
 
 ---
 
