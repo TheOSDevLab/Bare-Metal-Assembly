@@ -119,6 +119,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
 ### Projects
 
 + [Operation Skip B](../projects/03_loops/01_operation_skip_b/README.md)
++ [Blastoff Countdown](../projects/03_loops/02_blastoff_countdown/README.md)
 
 ---
 
@@ -128,10 +129,10 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 #### Assembly Instructions
 
-+ `JE` / `JZ`
-+ `JNE` / `JNZ`
-+ `JBE` / `JNA`
-+ `JA` / `JNBE`
++ [`JE` / `JZ`](../notes/03_assembly_instructions/je_or_jz.md)
++ [`JNE` / `JNZ`](../notes/03_assembly_instructions/jne_or_jnz.md)
++ [`JBE` / `JNA`](../notes/03_assembly_instructions/jbe_or_jna.md)
++ [`JA` / `JNBE`](../notes/03_assembly_instructions/ja_or_jnbe.md)
 + `JLE` / `JNG`
 + `JC` / `JB` / `JNAE`
 + `JNC` / `JAE` / `JNB`
