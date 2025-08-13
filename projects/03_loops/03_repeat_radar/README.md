@@ -1,4 +1,4 @@
-# LOOPE Repetition Counter
+# Repeat Radar
 
 > **Random Quote:** Repetition is the mother of learning.
 
