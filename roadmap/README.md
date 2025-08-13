@@ -133,8 +133,8 @@ This is covered in [this file](../notes/02_boilerplate.md).
 + [`JNE` / `JNZ`](../notes/03_assembly_instructions/jne_or_jnz.md)
 + [`JBE` / `JNA`](../notes/03_assembly_instructions/jbe_or_jna.md)
 + [`JA` / `JNBE`](../notes/03_assembly_instructions/ja_or_jnbe.md)
-+ `JLE` / `JNG`
-+ `JC` / `JB` / `JNAE`
++ [`JLE` / `JNG`](../notes/03_assembly_instructions/jle_or_jng.md)
++ [`JC` / `JB` / `JNAE`](../notes/03_assembly_instructions/jc_or_jb_or_jnae.md)
 + `JNC` / `JAE` / `JNB`
 + `JG` / `JNLE`
 + `CMP`, `TEST`
