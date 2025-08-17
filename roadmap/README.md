@@ -120,6 +120,8 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 + [Operation Skip B](../projects/03_loops/01_operation_skip_b/README.md)
 + [Blastoff Countdown](../projects/03_loops/02_blastoff_countdown/README.md)
++ [Repeat Radar](../projects/03_loops/03_repeat_radar/README.md)
++ [Diff Sniffer](../projects/03_loops/04_diff_sniffer/README.md)
 
 ---
 
