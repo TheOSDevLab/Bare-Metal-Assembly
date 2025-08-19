@@ -3,6 +3,7 @@ bits 16
 
 CHAR equ "w"
 MAX equ 15
+%define MAX_INDEX (MAX - 1)
 
 start:
     ; Set video mode and clear the screen.
@@ -24,8 +25,8 @@ find_char:
 
 print_index:
    ; Index = 14 - CX.
-   mov al, 14
-   sub al, cl           ; AL = 14 - CX.
+   mov al, MAX_INDEX
+   sub al, cl           ; AL = (MAX - 1) - CX.
    add al, '0'          ; Convert AL to string.
 
    ; Print the index.
