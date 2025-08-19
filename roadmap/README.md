@@ -118,10 +118,11 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ### Projects
 
-+ [Operation Skip B](../projects/03_loops/01_operation_skip_b/README.md)
-+ [Blastoff Countdown](../projects/03_loops/02_blastoff_countdown/README.md)
-+ [Repeat Radar](../projects/03_loops/03_repeat_radar/README.md)
-+ [Diff Sniffer](../projects/03_loops/04_diff_sniffer/README.md)
+1. [Operation Skip B](../projects/03_loops/01_operation_skip_b/README.md)
+2. [Blastoff Countdown](../projects/03_loops/02_blastoff_countdown/README.md)
+3. [Repeat Radar](../projects/03_loops/03_repeat_radar/README.md)
+4. [Diff Sniffer](../projects/03_loops/04_diff_sniffer/README.md)
+5. [Char Hunt](../projects/03_loops/05_char_hunt/README.md)
 
 ---
 
@@ -153,6 +154,9 @@ This is covered in [this file](../notes/02_boilerplate.md).
 > + `JCXZ`
 > + `JECXZ`
 
+#### Assembler Directives
+
++ `%macro`
 
 ----
 
