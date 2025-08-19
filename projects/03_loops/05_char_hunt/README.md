@@ -86,7 +86,6 @@ The target character `'w'` first occurs at index `6` (zero-based). The program l
 
   * The string contains the target character.
   * The index of the target character is less than `MAX`.
-* The calculation `14 - CX` works because the maximum search length is 15. If you change `MAX`, adjust this calculation accordingly.
 * Extending the program to handle longer strings would require dynamically handling `MAX` and possibly multi-digit index output.
 
 ---
