@@ -60,6 +60,16 @@ mov byte [param(2,ebx)], ctrl 'D'
 ; Expands to: mov byte [(2)+(2)*(ebx)], 0x1F & 'D'
 ```
 
+```assembly
+; This macro prints the given character.
+
+%define PRINT(char) \
+    mov ah, 0x0E    \
+    mov al, char    \
+    mov bh, 0       \
+    int 0x10        \
+```
+
 ---
 
 ## Practical Use Cases
@@ -94,5 +104,6 @@ mov byte [param(2,ebx)], ctrl 'D'
 * It contrasts with `%assign`, which evaluates immediately at definition time.
 * `-dFOO=100` command-line option is an alternative to placing `%define FOO 100` in code.
 * Refer to [this document](../../Q&A/05_equ_vs_%25define.md) for a detailed explanation of the difference between `EQU` and `%define`.
+* Refer to [this document](../../Q&A/07_macro_vs_function.md) for guidance on choosing between macros and functions in assembly programming.
 
 ---
