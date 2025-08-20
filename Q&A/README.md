@@ -14,5 +14,6 @@ This directory collects all the small but important questions that come up while
 4. [How can I change the counter register used by `LOOP` using address size override?](04_how_to_override_address_size.md)
 5. [What's the difference between `EQU` and `%define` assembler directives?](05_equ_vs_%25define.md)
 6. [When comparing signed numbers in x86 assembly, why does `SF` not being equal to `OF` mean that one number is less than the other?](06_sf_of_comparison_logic.md)
+7. [How do I know whether to use a macro or a function in assembly?](07_macro_vs_function.md)
 
 ---
