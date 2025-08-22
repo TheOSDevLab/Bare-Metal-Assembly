@@ -97,9 +97,9 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ### Projects
 
-+ [Swap and Show](../projects/02_data_movement/01_swap_and_show/README.md)
-+ [Register Shuffling Puzzle](../projects/02_data_movement/02_register_shuffling_puzzle/README.md)
-+ [Array Indexing](../projects/02_data_movement/03_array_indexing/README.md)
+1. [Swap and Show](../projects/02_data_movement/01_swap_and_show/README.md)
+2. [Register Shuffling Puzzle](../projects/02_data_movement/02_register_shuffling_puzzle/README.md)
+3. [Array Indexing](../projects/02_data_movement/03_array_indexing/README.md)
 
 ---
 
@@ -132,19 +132,25 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 #### Assembly Instructions
 
-+ [`JE` / `JZ`](../notes/03_assembly_instructions/je_or_jz.md)
-+ [`JNE` / `JNZ`](../notes/03_assembly_instructions/jne_or_jnz.md)
-+ [`JBE` / `JNA`](../notes/03_assembly_instructions/jbe_or_jna.md)
-+ [`JA` / `JNBE`](../notes/03_assembly_instructions/ja_or_jnbe.md)
-+ [`JLE` / `JNG`](../notes/03_assembly_instructions/jle_or_jng.md)
-+ [`JC` / `JB` / `JNAE`](../notes/03_assembly_instructions/jc_or_jb_or_jnae.md)
-+ `JNC` / `JAE` / `JNB`
-+ `JG` / `JNLE`
-+ `CMP`, `TEST`
++ **Neutral**:
+    + [`CMP`](../notes/03_assembly_instructions/cmp.md)
+    + [`TEST`](../notes/03_assembly_instructions/test.md)
+    + [`JE` / `JZ`](../notes/03_assembly_instructions/je_or_jz.md)
+    + [`JNE` / `JNZ`](../notes/03_assembly_instructions/jne_or_jnz.md)
+
++ **Unsigned Numbers**:
+    + [`JBE` / `JNA`](../notes/03_assembly_instructions/jbe_or_jna.md)
+    + [`JA` / `JNBE`](../notes/03_assembly_instructions/ja_or_jnbe.md)
+    + [`JC` / `JB` / `JNAE`](../notes/03_assembly_instructions/jc_or_jb_or_jnae.md)
+    + [`JNC` / `JAE` / `JNB`](../notes/03_assembly_instructions/jnc_or_jae_or_jnb.md)
+
++ **Signed Numbers**:
+    + [`JLE` / `JNG`](../notes/03_assembly_instructions/jle_or_jng.md)
+    + [`JG` / `JNLE`](../notes/03_assembly_instructions/jg_or_jnle.md)
+    + `JGE` / `JNL`
+    + `JL` / `JNGE`
 
 > I intend to address these instructions at a later stage in my study plan:
-> + `JGE` / `JNL`
-> + `JL` / `JNGE`
 > + `JO`
 > + `JNO`
 > + `JS`
