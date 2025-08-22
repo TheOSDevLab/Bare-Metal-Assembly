@@ -12,7 +12,7 @@
 - [Practical Use Cases](#practical-use-cases)
 - [Best Practices](#best-practices)
 - [Common Pitfalls](#common-pitfalls)
-- [Notes and Reference](#notes-and-reference)
+- [Notes and References](#notes-and-references)
 
 ---
 
