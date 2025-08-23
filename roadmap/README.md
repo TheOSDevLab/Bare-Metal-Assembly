@@ -147,8 +147,8 @@ This is covered in [this file](../notes/02_boilerplate.md).
 + **Signed Numbers**:
     + [`JLE` / `JNG`](../notes/03_assembly_instructions/jle_or_jng.md)
     + [`JG` / `JNLE`](../notes/03_assembly_instructions/jg_or_jnle.md)
-    + `JGE` / `JNL`
-    + `JL` / `JNGE`
+    + [`JGE` / `JNL`](../notes/03_assembly_instructions/jge_or_jnl.md)
+    + [`JL` / `JNGE`](../notes/03_assembly_instructions/jl_or_jnge.md)
 
 > I intend to address these instructions at a later stage in my study plan:
 > + `JO`
