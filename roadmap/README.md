@@ -166,7 +166,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ### Projects
 
-1. [Byte Matcher](../notes/projects/04_conditionals/01_byte_matcher/README.md)
+1. [Byte Matcher](../projects/04_conditionals/01_byte_matcher/README.md)
 
 ----
 
