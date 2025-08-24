@@ -164,6 +164,10 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 + `%macro`
 
+### Projects
+
+1. [Byte Matcher](../notes/projects/04_conditionals/01_byte_matcher/README.md)
+
 ----
 
 ## Stack Operations
