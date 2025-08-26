@@ -166,7 +166,9 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ### Projects
 
-1. [Byte Matcher](../projects/04_conditionals/01_byte_matcher/README.md)
+1. [ByteMatcher](../projects/04_conditionals/01_byte_matcher/README.md)
+2. [ZeroCheck](../projects/04_conditionals/02_zero_check/README.md)
+3. [WrapAroundCheck](../projects/04_conditionals/03_wrap_around_check/README.md)
 
 ----
 
