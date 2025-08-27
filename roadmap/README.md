@@ -171,6 +171,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
 3. [WrapAroundCheck](../projects/04_conditionals/03_wrap_around_check/README.md)
 4. [AgeGate](../projects/04_conditionals/04_age_gate/README.md)
 5. [SpeedGovernor](../projects/04_conditionals/05_speed_governor/README.md)
+6. [OverheatTrigger](../projects/04_conditionals/06_overheat_trigger/README.md)
 
 ----
 
