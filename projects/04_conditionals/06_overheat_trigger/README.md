@@ -62,11 +62,11 @@ The script uses `NASM` to assemble `main.asm` into a bootable flat binary (`main
 
 Output when `CPU_TEMP == 80`:
 
-![Program's Output 1](../../../resources/images/overheat_trigger_output_1.png
+![Program's Output 1](../../../resources/images/overheat_trigger_output_1.png)
 
 Output when `CPU_TEMP == 120`:
 
-![Program's Output 2](../../../resources/images/overheat_trigger_output_2.png
+![Program's Output 2](../../../resources/images/overheat_trigger_output_2.png)
 
 This confirms that the comparison and branching logic work as intended.
 
