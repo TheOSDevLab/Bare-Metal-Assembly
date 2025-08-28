@@ -192,6 +192,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
     - [`INC`](../notes/03_assembly_instructions/inc.md)
     - [`DEC`](../notes/03_assembly_instructions/dec.md)
     - [`DIV`](../notes/03_assembly_instructions/div.md)
+    - [`NEG`](../notes/03_assembly_instructions/neg.md)
 
 **Note:** The `MUL`, `IMUL`, and `IDIV` instructions do exist, but they have been omitted here, as they are seldom required in typical bootloader development. You can still learn them on your own if you feel the need.
 
