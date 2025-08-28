@@ -12,7 +12,6 @@
 + [Practical Use Cases](#practical-use-cases)
 + [Best Practices](#best-practices)
 + [Common Pitfalls](#common-pitfalls)
-+ [Notes and References](#notes-and-references)
 
 ---
 
@@ -63,12 +62,6 @@
 ---
 
 ## Common Pitfalls
-
-
-
----
-
-## Notes and References
 
 
 
