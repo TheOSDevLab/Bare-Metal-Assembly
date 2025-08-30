@@ -179,7 +179,14 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ## Stack Operations
 
-+ `PUSH`, `POP`, `PUSHA`, `POPA`
+### Learn These
+
+#### Assembly Instructions
+
++ [`PUSH`](../notes/03_assembly_instructions/push.md)
++ [`POP`](../notes/03_assembly_instructions/pop.md)
+
++ `PUSHA`, `POPA`
 + `CALL`, `RET`
 
 ---
