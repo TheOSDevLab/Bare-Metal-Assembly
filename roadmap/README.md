@@ -185,9 +185,10 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 + [`PUSH`](../notes/03_assembly_instructions/push.md)
 + [`POP`](../notes/03_assembly_instructions/pop.md)
-
-+ `PUSHA`, `POPA`
-+ `CALL`, `RET`
++ [`PUSHA`](../notes/03_assembly_instructions/pusha.md)
++ [`POPA`](../notes/03_assembly_instructions/popa.md)
++ [`CALL`](../notes/03_assembly_instructions/call.md)
++ [`RET`](../notes/03_assembly_instructions/ret.md)
 
 ---
 
