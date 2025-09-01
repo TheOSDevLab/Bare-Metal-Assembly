@@ -16,5 +16,6 @@ This directory collects all the small but important questions that come up while
 6. [When comparing signed numbers in x86 assembly, why does `SF` not being equal to `OF` mean that one number is less than the other?](06_sf_of_comparison_logic.md)
 7. [How do I know whether to use a macro or a function in assembly?](07_macro_vs_function.md)
 8. [How can I determine whether I am working with signed or unsigned numbers in assembly?](08_signed_and_unsigned_numbers.md)
+9. [What is an atomic instruction?](09_atomic_instructions.md)
 
 ---
