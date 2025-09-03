@@ -190,6 +190,10 @@ This is covered in [this file](../notes/02_boilerplate.md).
 + [`CALL`](../notes/03_assembly_instructions/call.md)
 + [`RET`](../notes/03_assembly_instructions/ret.md)
 
+### Projects
+
+1. [`FullStack`](../notes/04_stack_operations/01_full_stack/README.md)
+
 ---
 
 ## Arithmetic
