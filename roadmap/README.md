@@ -221,7 +221,26 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ## Bitwise Operations
 
-+ `AND`, `OR`, `XOR`, `NOT`, `SHL`, `SHR`
+### Learn These
+
+#### Assembly Instructions
+
++ [`AND`](../notes/03_assembly_instructions/and.md)
++ [`OR`](../notes/03_assembly_instructions/or.md)
++ [`XOR`](../notes/03_assembly_instructions/xor.md)
++ [`NOT`](../notes/03_assembly_instructions/not.md)
++ [`SHL`](../notes/03_assembly_instructions/shl.md)
++ [`SHR`](../notes/03_assembly_instructions/shr.md)
++ [`SAL`](../notes/03_assembly_instructions/sal.md)
++ [`SAR`](../notes/03_assembly_instructions/sar.md)
+
+> I intend to address these instructions at a later stage in my study plan:
+> + `ROL`
+> + `ROR`
+> + `RCL`
+> + `RCR`
+
+### Projects
 
 ---
 
