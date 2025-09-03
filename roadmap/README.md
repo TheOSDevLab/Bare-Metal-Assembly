@@ -192,7 +192,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ### Projects
 
-1. [`FullStack`](../notes/04_stack_operations/01_full_stack/README.md)
+1. [`FullStack`](../projects/04_stack_operations/01_full_stack/README.md)
 
 ---
 
