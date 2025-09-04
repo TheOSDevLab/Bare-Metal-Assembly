@@ -5,6 +5,7 @@
 ## Key Topics
 
 + [Introduction](#introduction)
+    + [Behavior](#behavior)
 + [Register Breakdown](#register-breakdown)
 + [Examples](#examples)
 
@@ -14,7 +15,7 @@
 
 BIOS `INT 10h` function `0Eh`, also known as **Teletype Output**, is a BIOS **video service** used to display a single character on the screen in **text mode**, emulating the behavior of a typewriter (hence the name *Teletype*).
 
-**Behavior:**
+### Behavior
 
 + The given character is written to the screen at the current cursor position.
 + The cursor is automatically advanced to the next column.
@@ -29,13 +30,6 @@ Because this function does not require setting up a video buffer or calculating 
 ---
 
 ## Register Breakdown
-
-| Register | Purpose                                                          |
-| -------- | ---------------------------------------------------------------- |
-| `AH`     | Must be `0x0E`                                                   |
-| `AL`     | ASCII character to print                                         |
-| `BH`     | Video page number (0 for most cases)                             |
-| `BL`     | Text color (only in graphics modes; can be omitted in text mode) |
 
 + `AH`: This register is the **function selector**. It specifies which BIOS video service to execute. The required value is `0x0E` for teletype output.
 + `AL`: This register contains the **ASCII code** of the character to be displayed. The valid range is `0x00` to `0xFF`, though printable characters are typically in the range `0x20` to `0x7E`.
