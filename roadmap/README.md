@@ -243,6 +243,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
 ### Projects
 
 1. [BitMultiplier](../projects/07_bitwise_operations/01_bit_multiplier/README.md)
+2. [BitCipher](../projects/07_bitwise_operations/02_bit_cipher/README.md)
 
 ---
 
