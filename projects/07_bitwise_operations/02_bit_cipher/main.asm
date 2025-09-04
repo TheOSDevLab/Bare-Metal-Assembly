@@ -46,13 +46,11 @@ done:
 print_string:
     push si
     mov cx, [string_len]
-    mov al, [si]
 
 .print_loop:
+    mov al, [si]
     call print_char
     inc si
-
-    mov al, [si]
     loop .print_loop
 
 .return:
@@ -92,7 +90,7 @@ get_string_len:
     ret
 
 password   db "Onlyfeet password.", 0
-string_len dw 3
+string_len dw 0
 
 times 510 - ($ - $$) db 0
 dw 0xAA55
