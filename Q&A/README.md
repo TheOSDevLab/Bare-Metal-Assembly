@@ -17,5 +17,6 @@ This directory collects all the small but important questions that come up while
 7. [How do I know whether to use a macro or a function in assembly?](07_macro_vs_function.md)
 8. [How can I determine whether I am working with signed or unsigned numbers in assembly?](08_signed_and_unsigned_numbers.md)
 9. [What is an atomic instruction?](09_atomic_instructions.md)
+10. [How do I perform multiplication using left shifts and addition?](10_shift_and_addition_multiplication.md)
 
 ---
