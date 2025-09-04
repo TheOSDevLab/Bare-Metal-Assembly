@@ -5,7 +5,6 @@
 ## Key Topics
 
 + [Introduction](#introduction)
-+ [Links](#links)
 
 ---
 
@@ -50,9 +49,3 @@ In 16-bit bootloaders, `INT 10h` is typically used for:
 Each of these services will be covered in its own dedicated file within this directory.
 
 ---
-
-## Links
-
-> The following links are arranged in ascending order for ease of reference.
-
-+ [`0Eh`](./0Eh.md)
