@@ -255,7 +255,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
     + [`REPNE` / `REPNZ`](../notes/03_assembly_instructions/repne_or_repnz.md)
 
 
-+ `MOVSB`, `STOSB`, `LODSB`, `SCASB`, and their variants.
++ `MOVSB`, `STOSB`, `LODSB`, `SCASB`, `CMPSB` and their variants.
 
 ---
 
