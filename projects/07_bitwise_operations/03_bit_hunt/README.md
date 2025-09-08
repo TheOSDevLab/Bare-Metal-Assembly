@@ -70,7 +70,7 @@ The script uses `NASM` to assemble `main.asm` into a bootable flat binary (`main
 
 For `NUM equ 1026` (binary `0000 0100 0000 0010`), the program prints:
 
-![Program's Output](../../../resources/image/bit_hunt_output.png)
+![Program's Output](../../../resources/images/bit_hunt_output.png)
 
 Explanation:
 
