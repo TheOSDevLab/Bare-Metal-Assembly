@@ -250,13 +250,17 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ## String and Memory Instructions
 
-+ **Assembly Instructions**:
-    + [`REP`](../notes/03_assembly_instructions/rep.md)
-    + [`REPE` / `REPZ`](../notes/03_assembly_instructions/repe_or_repz.md)
-    + [`REPNE` / `REPNZ`](../notes/03_assembly_instructions/repne_or_repnz.md)
+### Assembly Instructions
+
++ [`MOVSB, MOVSW, MOVSD`](../notes/03_assembly_instructions/movs.md)
++ [`STOSB, STOSW, STOSD`](../notes/03_assembly_instructions/stos.md)
+
++ [`REP`](../notes/03_assembly_instructions/rep.md)
++ [`REPE` / `REPZ`](../notes/03_assembly_instructions/repe_or_repz.md)
++ [`REPNE` / `REPNZ`](../notes/03_assembly_instructions/repne_or_repnz.md)
 
 
-+ `MOVSB`, `STOSB`, `LODSB`, `SCASB`, `CMPSB` and their variants.
++ `LODS`, `SCAS`, `CMPS`.
 
 ---
 
