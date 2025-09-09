@@ -267,6 +267,7 @@ This is covered in [this file](../notes/02_boilerplate.md).
 ### Projects
 
 1. [MirrorString](../projects/08_string_and_memory_instructions/01_mirror_string/README.md)
+2. [ZBlock](../projects/08_string_and_memory_instructions/02_zblock/README.md)
 
 ---
 
