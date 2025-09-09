@@ -252,6 +252,8 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ### Assembly Instructions
 
++ `CLD`, `STD`
+
 + [`MOVSB, MOVSW, MOVSD`](../notes/03_assembly_instructions/movs.md)
 + [`STOSB, STOSW, STOSD`](../notes/03_assembly_instructions/stos.md)
 + [`LODSB, LODSW, LODSD`](../notes/03_assembly_instructions/lods.md)
@@ -263,6 +265,8 @@ This is covered in [this file](../notes/02_boilerplate.md).
 + [`REPNE` / `REPNZ`](../notes/03_assembly_instructions/repne_or_repnz.md)
 
 ### Projects
+
+1. [MirrorString](../projects/08_string_and_memory_instructions/01_mirror_string/README.md)
 
 ---
 
