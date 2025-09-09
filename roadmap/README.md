@@ -254,13 +254,15 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 + [`MOVSB, MOVSW, MOVSD`](../notes/03_assembly_instructions/movs.md)
 + [`STOSB, STOSW, STOSD`](../notes/03_assembly_instructions/stos.md)
++ [`LODSB, LODSW, LODSD`](../notes/03_assembly_instructions/lods.md)
++ [`SCASB, SCASW, SCASD`](../notes/03_assembly_instructions/scas.md)
++ [`CMPSB, CMPSW, CMPSD`](../notes/03_assembly_instructions/cmps.md)
 
 + [`REP`](../notes/03_assembly_instructions/rep.md)
 + [`REPE` / `REPZ`](../notes/03_assembly_instructions/repe_or_repz.md)
 + [`REPNE` / `REPNZ`](../notes/03_assembly_instructions/repne_or_repnz.md)
 
-
-+ `LODS`, `SCAS`, `CMPS`.
+### Projects
 
 ---
 
