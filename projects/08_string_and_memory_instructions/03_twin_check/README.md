@@ -83,7 +83,7 @@ second_string db "Simple string.", 0
 
 ![Program's Output 2](../../../resources/images/twin_check_output_2.png)
 
-This output occurs because the string mismatch at the second character ("a", "i").
+This output occurs because there is a mismatch at the second character ("a", "i").
 
 ---
 
