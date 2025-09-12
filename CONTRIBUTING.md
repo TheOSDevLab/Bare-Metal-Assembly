@@ -10,7 +10,7 @@ This repository serves as a personal collection of notes and examples on **Assem
 
 ## Acceptable Contributions
 
-+ **Report errors:** This includes typographical mistakes, broken links, factual inaccuracies, or unclear explanations. Please feel free to open an issue or submit a pull request with the correction.
++ **Report errors:** This includes typographical mistakes, broken links, factual inaccuracies, or unclear explanations. Please feel free to open an issue.
 + **Make suggestions:** If you would like to recommend a topic for future inclusion, you are encouraged to open an issue with your suggestion.
 
 ---
@@ -27,3 +27,5 @@ This repository serves as a personal collection of notes and examples on **Assem
 This repository is intended to reflect my personal progress in learning OS development, written in my own words, at my own pace. It serves as a public-facing learning log, and maintaining its integrity requires limiting external contributions to feedback and suggestions.
 
 Thank you for your understanding and support.
+
+---
