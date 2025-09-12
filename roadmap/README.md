@@ -271,11 +271,4 @@ This is covered in [this file](../notes/02_boilerplate.md).
 
 ---
 
-## Interrupts
-
-+ Software interrupts: `INT 0x10`, `INT 0x13`, etc.
-+ `IRET`, `CLI`, `STI`, `HLT`
-
----
-
 > This learning path is incremental. Advanced instructions such as `LGDT`, `LIDT`, and `INVLPG` will be introduced later, as the complexity of OS development increases. These and other instructions will be covered in context throughout this repository.
