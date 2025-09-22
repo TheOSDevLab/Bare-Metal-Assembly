@@ -61,5 +61,6 @@ Instead, follow the recommended sequence provided in the project's learning [roa
 ## Links
 
 + [`INT 10h`](./int10/README.md)
++ [`INT 13h`](./int13/README.md)
 
 ---
