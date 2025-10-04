@@ -18,5 +18,6 @@ This directory collects all the small but important questions that come up while
 8. [How can I determine whether I am working with signed or unsigned numbers in assembly?](08_signed_and_unsigned_numbers.md)
 9. [What is an atomic instruction?](09_atomic_instructions.md)
 10. [How do I perform multiplication using left shifts and addition?](10_shift_and_addition_multiplication.md)
+11. [Why is the sector count for INT 13h AH=02h limited to 128 when an 8-bit register can hold 255?](11_sector_count_limit.md)
 
 ---
