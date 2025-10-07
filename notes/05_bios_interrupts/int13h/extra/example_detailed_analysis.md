@@ -1,5 +1,47 @@
 ### High-Level Purpose
 
+```asm
+; Read multiple chunks of a kernel from disk
+mov ax, 0x1000
+mov es, ax         ; Destination segment
+mov di, 0x0000     ; Destination offset
+mov dword [LBA], 1 ; Starting LBA
+
+.load_loop:
+    ; Set up DAP for each read
+    mov si, DAPACK
+    mov word [DAPACK.count], 16    ; Read 16 sectors at a time (8KB)
+    mov word [DAPACK.offset], di   ; Current offset
+    mov word [DAPACK.segment], es  ; Current segment
+    mov eax, [LBA]
+    mov dword [DAPACK.lba_low], eax
+
+    mov ah, 0x42
+    mov dl, 0x80
+    int 0x13
+    jc disk_error
+
+    ; Update position for next chunk
+    mov ax, es
+    add ax, (512 * 16) / 16    ; Advance segment by 512 paragraphs
+    mov es, ax
+
+    add dword [LBA], 16        ; Advance LBA by 16 sectors
+
+    cmp dword [LBA], 256       ; Stop after 256 sectors (128KB)
+    jl .load_loop
+
+jmp 0x1000:0x0000              ; Jump to loaded kernel
+
+DAPACK:
+    db 0x10, 0
+    dw 16         ; Sectors to read
+    dw 0          ; Offset (updated in code)
+    dw 0          ; Segment (updated in code)
+LBA dd 1          ; Current LBA
+    dd 0
+```
+
 This code loads a kernel that is **128 KB** in size from a hard disk into memory at address `0x10000` (segment `0x1000`, offset `0x0000`). It does this by reading the kernel in **8 KB chunks** (16 sectors at a time) to work reliably within the potential limits of the BIOS.
 
 ---
@@ -14,7 +56,7 @@ mov di, 0x0000     ; Destination offset
 mov dword [LBA], 1 ; Starting LBA
 ```
 - **`ES:DI`** is set to point to the memory address `0x1000:0x0000`. In the physical address scheme, this is `(0x1000 * 16) + 0x0000 = 0x10000`.
-- The `[LBA]` variable is initialized to `1`, meaning the code will start reading from the second sector on the disk (sectors are often numbered starting from 0).
+- The `[LBA]` variable is initialized to `1`, meaning the code will start reading from the second sector on the disk (sectors are numbered starting from 0).
 
 **2. The Loop: Reading and Updating Pointers**
 ```asm
@@ -41,12 +83,6 @@ mov dword [LBA], 1 ; Starting LBA
 
 **3. Preparing for the Next Chunk**
 ```asm
-    ; Update position for next chunk
-    add di, 512 * 16           ; Advance offset by 8KB
-```
-- The code advances the destination **offset** (`DI`) by 8192 bytes (8 KB). Since `DI` is a 16-bit register, it can only hold values up to 65535 (64 KB). This is important.
-
-```asm
     mov ax, es
     add ax, (512 * 16) / 16    ; Advance segment by 512 paragraphs
     mov es, ax
@@ -54,12 +90,12 @@ mov dword [LBA], 1 ; Starting LBA
 - This is the key to handling large memory transfers. It adjusts the **segment** register (`ES`).
 - Since `(512 * 16) / 16 = 512`, this adds 512 to the segment value. In the x86 memory model, adding `1` to a segment register moves the pointer forward in memory by **16 bytes** (a "paragraph").
 - Therefore, adding `512` to the segment register moves the pointer forward by `512 * 16 = 8192` bytes (8 KB).
-- **Why is this done?** Because the offset (`DI`) was just advanced by 8 KB and would now be `8192`. On the next loop, if we only advanced the offset again, it would become `16384`, and so on, until it would eventually exceed the 64 KB limit of the 16-bit register, causing a wrap-around and memory corruption. By adjusting the segment, we effectively add to the *base address*, "resetting" the offset (`DI`) back to a low number for the next chunk while continuing to move the physical memory pointer forward.
+- **Why is this done?** Because if only the offset (`DI`) was advanced by 8 KB, it would now be `8192`. On the next loop, if we only advanced the offset again, it would become `16384`, and so on, until it would eventually exceed the 64 KB limit of the 16-bit register, causing a wrap-around and memory corruption. By adjusting the segment, we effectively add to the *base address*, eliminating the wrap-around risk while continuing to move the physical memory pointer forward.
 
 **The calculation in a nutshell:**
 `New Physical Address = (New_Segment * 16) + New_Offset`
-After first loop: `(0x1000 * 16) + 8192 = 0x10000 + 0x2000 = 0x12000`
-After second loop: `(0x1200 * 16) + 8192 = 0x12000 + 0x2000 = 0x14000`
+After first loop: `(0x1000 + 0x200) * 16 = 0x12000`
+After second loop: `(0x1200 + 0x200) * 16 = 0x14000`
 
 ```asm
     add dword [LBA], 16        ; Advance LBA by 16 sectors
